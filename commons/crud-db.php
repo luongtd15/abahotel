@@ -64,12 +64,12 @@ if (!function_exists('insert')) {
     }
 }
 
-if (!function_exists('listAll')) {
-    function listAll($tableName)
+if (!function_exists('getList')) {
+    function getList($tableName)
     {
 
         try {
-            $sql = "SELECT*FROM $tableName ORDER BY id DESC";
+            $sql = "SELECT*FROM $tableName";
 
             $stmt = $GLOBALS['conn']->prepare($sql);
 
