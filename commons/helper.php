@@ -27,9 +27,7 @@ if (!function_exists('debug')) {
 if (!function_exists('e404')) {
     function e404()
     {
-
         echo "404 - Not found";
-
         die;
     }
 }
@@ -72,28 +70,5 @@ if (!function_exists("middlewareAuthCheck")) {
             header('location:' . BASE_URL_ADMIN . '?act=login');
             exit();
         }
-    }
-}
-
-if (!function_exists("settings")) {
-    function settings()
-    {
-        $fileSetting = PATH_UPLOAD . '/uploads/settings.json';
-        
-        if (file_exists($fileSetting)) {
-            $data = json_decode(file_get_contents($fileSetting), true);
-        } else {
-            $settings = listAll('settings');
-
-            $keys = array_column($settings, 'setting_key');
-
-            $values = array_column($settings, 'value');
-
-            $data = array_combine($keys, $values);
-
-            file_put_contents($fileSetting, json_encode($data));
-        }
-
-        return $data;
     }
 }
