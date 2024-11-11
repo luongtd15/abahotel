@@ -23,4 +23,3 @@ define('DB_PASSWORD', '');
 define('STATUS_AVAILABLE', 'available');
 define('STATUS_OCCUPIED', 'occupied');
 
-
