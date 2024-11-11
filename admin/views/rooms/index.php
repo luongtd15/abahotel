@@ -4,7 +4,6 @@
         <div class="cr-page-title cr-page-title-2">
             <div class="cr-breadcrumb">
                 <h5 class="text-danger">ABA HOTEL - ROOMS</h5>
-                <a href="?act=room-create">Create a new room</a>
                 <ul>
                     <li><a href="<?= BASE_URL_ADMIN ?>">ABA Hotel</a></li>
                     <li>Rooms</li>
@@ -12,12 +11,20 @@
             </div>
 
         </div>
+
+        <div class="cr-page-title cr-page-title-2">
+            <div class="cr-breadcrumb">
+                <a href="?act=room-create" class="cr-btn radius-0 outline-btn color-secondary">Create a new room</a>
+            </div>
+        </div>
+
+
         <div class="row">
             <div class="col-md-12">
                 <div class="cr-card card-default product-list">
                     <div class="cr-card-content ">
                         <div class="table-responsive">
-                            <table id="product_list" class="table table-stripedr" style="width:100%">
+                            <table id="product_list" class="table" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>Room</th>
@@ -35,15 +42,19 @@
                                 <tbody>
                                     <?php foreach ($rooms as $room):  ?>
                                         <tr>
-                                            <td><img class="tbl-thumb" src=''
-                                                    alt="Product Image"></td>
+                                            <td>
+                                                <div>
+                                                    <img class="img-fluid" src='<?= BASE_URL . $room['r_image'] ?>'
+                                                        alt="Product Image">
+                                                </div>
+                                            </td>
                                             <td><?= $room['r_name'] ?></td>
                                             <td><?= $room['t_name'] ?></td>
                                             <td><?= $room['t_number_of_beds'] ?></td>
                                             <td><?= $room['t_max_occupancy'] ?></td>
-                                            <td><?= $room['r_status'] ?></td>
+                                            <td><span class="color-success"><?= $room['r_status'] ?></span></td>
                                             <td><?= $room['r_description'] ?></td>
-                                            <td><span class="active"><?= $room['t_price'] ?>$</span></td>
+                                            <td><span class="color-danger"><?= $room['t_price'] ?>$</span></td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
                                                     <button type="button"

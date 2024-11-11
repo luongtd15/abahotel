@@ -42,6 +42,8 @@ function roomCreate()
             "description" => $_POST['description'] ?? null
         ];
 
+        // debug($data);
+
         validateCreateRoom($data);
 
         $image = $data['image'];
@@ -66,28 +68,22 @@ function validateCreateRoom($data)
     $errs = [];
 
     if (empty($data['name'])) {
-        $errs[] = 'room name cannot be empty';
+        $errs[] = 'Room name cannot be empty';
     } elseif (strlen($data['name']) > 30) {
-        $errs[] = 'room name must be no more than 30 characters';
-    }
-
-    if (empty($data['price'])) {
-        $errs[] = 'room price cannot be empty';
-    } elseif ($data['price'] < 0) {
-        $errs[] = 'room price must > 0';
+        $errs[] = 'Room name must be no more than 30 characters';
     }
 
     if (empty($data['image'])) {
 
-        $errs[] = "The room's thumbnail cannot be empty";
+        $errs[] = "Room image cannot be empty";
     } elseif (is_array($data['image'])) {
 
         $imgType = ['image/png', 'image/jpg', 'image/jpeg'];
 
         if ($data['image']['size'] > 2 * 1024 * 1024) {
-            $errs[] = "The room's thumbnail cannot be larger than 2 MB";
+            $errs[] = "Room image cannot be larger than 2 MB";
         } elseif (!in_array($data['image']['type'], $imgType)) {
-            $errs[] = "the room's thumbnail can only be in PNG, JPG, or JPEG format";
+            $errs[] = "Room image can only be in PNG, JPG, or JPEG format";
         }
     }
 
