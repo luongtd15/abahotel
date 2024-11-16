@@ -1,33 +1,21 @@
 <?php
-
 session_start();
 
-// require cac file trong folder commons (ngoai tru disconnect-db.php)
 require_once '../commons/env.php';
-require_once '../commons/helper.php';
-require_once '../commons/connect-db.php';
-require_once '../commons/crud-db.php';
-// require_once './views/layouts/master.php';
 
-// require file trong controllers va models
-requireFile(PATH_CONTROLLER_ADMIN);
-requireFile(PATH_MODEL_ADMIN);
+// Database
+include 'app/Database/Database.php';
+// Model
+include 'app/Models/HomeModel.php';
+include 'app/Models/Room.php';
+include 'app/Models/RoomType.php';
+include 'app/Models/User.php';
 
-$act = isset($_GET['act']) ? $_GET['act'] : '';
+// Controller
+include 'app/Controllers/HomeController.php';
+include 'app/Controllers/RoomController.php';
+include 'app/Controllers/RoomTypeController.php';
+include 'app/Controllers/UserController.php';
 
-// middlewareAuthCheck($act);
-
-match($act){
-    '' => homePage(),
-
-    'rooms' => roomList(),
-    'room-create' => roomCreate(),
-    'room-detail' => roomDetail($_GET['id']),
-    'room-update' => roomUpdate($_GET['id']),
-    'room-delete' => roomDelete($_GET['id'])
-    
-};
-
-
-
-require_once '../commons/disconnect-db.php';
+// route
+require_once 'router/web.php';
