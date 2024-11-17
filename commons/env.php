@@ -1,8 +1,8 @@
 <?php
 // khai bao cac bien moi truong dung global
-define('PATH_CONTROLLER', __DIR__ . '/../controllers/');
-define('PATH_MODEL', __DIR__ . '/../models/');
-define('PATH_VIEW', __DIR__ . '/../views/');
+define('PATH_CONTROLLER', __DIR__ . '/../client/app/Controllers/');
+define('PATH_MODEL', __DIR__ . '/../client/app/Models/');
+define('PATH_VIEW', __DIR__ . '/../client/app/Views/');
 
 define('PATH_CONTROLLER_ADMIN', __DIR__ . '/../admin/app/Controllers/');
 define('PATH_MODEL_ADMIN', __DIR__ . '/../admin/app/Models/');

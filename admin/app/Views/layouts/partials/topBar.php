@@ -98,10 +98,9 @@
                                 <li><a href="team-update.html">Settings</a></li>
                             </ul>
                             <ul class="border-top">
-                                <li><a href="signin.html"><i class="ri-logout-circle-r-line"></i>Logout</a></li>
+                                <li><a href="?act=admin-signout"><i class="ri-logout-circle-r-line"></i>Sign out</a></li>
                             </ul>
                         </div>
-                        <a href="?act=admin-signout">sign out</a>
                     </div>
                 </div>
             </div>
