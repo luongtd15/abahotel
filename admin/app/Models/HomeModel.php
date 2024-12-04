@@ -7,19 +7,6 @@ class HomeModel
         $this->db = new Database();
     }
 
-    function middlewareAuthCheck($act)
-    {
-        if ($act == 'signin') {
-            if (!empty($_SESSION['admin'])) {
-                header('location:' . BASE_URL_ADMIN);
-                exit();
-            }
-        } elseif (empty($_SESSION['admin'])) {
-            header('location:' . BASE_URL_ADMIN . '?act=signin');
-            exit();
-        }
-    }
-
     public function getAvailableRoomForHome()
     {
         $sql =
@@ -64,5 +51,81 @@ class HomeModel
                 ORDER BY r_id DESC
             ";
         return $this->db->pdo->query($sql)->fetchAll();
+    }
+
+    public function countCustomer()
+    {
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM users";
+            $stmt = $this->db->pdo->query($sql);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['total'];
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage();
+            return 0;
+        }
+    }
+
+    public function countRoomType()
+    {
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM room_types";
+            $stmt = $this->db->pdo->query($sql);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['total'];
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage();
+            return 0;
+        }
+    }
+
+    public function countAvailableRoom()
+    {
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM rooms WHERE status = 'available'";
+            $stmt = $this->db->pdo->query($sql);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['total'];
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage();
+            return 0;
+        }
+    }
+
+    public function countOccupiedRoom()
+    {
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM rooms WHERE status = 'occupied'";
+            $stmt = $this->db->pdo->query($sql);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['total'];
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage();
+            return 0;
+        }
+    }
+    public function countFeedback()
+    {
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM feedbacks";
+            $stmt = $this->db->pdo->query($sql);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['total'];
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage();
+            return 0;
+        }
+    }
+    public function countInvoice()
+    {
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM reservations";
+            $stmt = $this->db->pdo->query($sql);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result['total'];
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage();
+            return 0;
+        }
     }
 }

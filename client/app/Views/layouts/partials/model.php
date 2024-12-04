@@ -33,7 +33,7 @@
                                     <span class="new-price">$120.25</span>
                                     <span class="old-price">$123.25</span>
                                 </div>
-                                <div class="cr-size-weight">
+                                <!-- <div class="cr-size-weight">
                                     <h5><span>Size</span>/<span>Weight</span> :</h5>
                                     <div class="cr-kg">
                                         <ul>
@@ -43,7 +43,7 @@
                                             <li>5kg</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="cr-add-card">
                                     <div class="cr-qty-main">
                                         <input type="text" placeholder="." value="1" minlength="1" maxlength="20"

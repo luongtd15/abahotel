@@ -56,48 +56,34 @@ class User
     {
         //var_dump()
         
-       
-
         try {
             //code...
-            $sql = "SELECT * FROM users WHERE email = :email";
+            $sql = "SELECT * FROM users WHERE email = :email and password = :password LIMIT 1";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(['email' => $email]);
+            $stmt->execute([
+                ':email' => $email,
+                ':password' => $password
+            ]);
             // if ($stmt->errorCode() != '00000') {
             //     // In lỗi nếu có
             //     print_r($stmt->errorInfo());
             // }
-            $user = $stmt->fetch();
-
-            // var_dump($email);
-            // var_dump($user === false);
-            // die;
-            // var_dump($password);
-            // var_dump($user);
-            
-
-            // if ($user === false) {
-            //     echo "Không tìm thấy người dùng.";
-            // } else {
-            //     //var_dump($user);
-            // }
-
-           
-            if ($user && password_verify($password, $user->password)) {
-                
-                // $_SESSION['user_id'] = $user['id'];
-                $_SESSION['user_email'] =$user->email;
-
-                // Có thể trả về true hoặc thông tin người dùng để xác nhận thành công
-
-                return $user->email;
-            } else {
-                return false;
-            }
+            return $stmt->fetch();
         } catch (Exception $e) {
             //throw $th;
             error_log("Lỗi khi đăng nhập: " . $e->getMessage());
             return false;
         }
     }
+    // public function getUserThis($id)
+    // {
+    //     try {
+    //         $sql = "SELECT * FROM users WHERE id = $id";
+    //         return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+
+    //     } catch (Exception $err) {
+    //         echo "Error: " . $err->getMessage() . "<hr>";
+    //         return [];
+    //     }
+    // }
 }

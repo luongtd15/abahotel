@@ -85,21 +85,24 @@
                         <div class="cr-hover-tool">
                             <img class="user" src="<?= BASE_URL ?>assets/admin/assets/img/user/1.jpg" alt="user">
                         </div>
+
                         <div class="cr-hover-drop-panel right">
-                            <div class="details">
-                                <h6>Wiley Waites</h6>
-                                <p>wiley@example.com</p>
-                            </div>
-                            <ul class="border-top">
-                                <li><a href="team-profile.html">Profile</a></li>
-                                <li><a href="faq.html">Help</a></li>
-                                <li><a href="chatapp.html">Messages</a></li>
-                                <li><a href="project-overview.html">Projects</a></li>
-                                <li><a href="team-update.html">Settings</a></li>
-                            </ul>
-                            <ul class="border-top">
-                                <li><a href="?act=admin-signout"><i class="ri-logout-circle-r-line"></i>Sign out</a></li>
-                            </ul>
+                            <?php if (isset($_SESSION['admin'])): ?>
+                                <div class="details">
+                                    <h6><?= $_SESSION['admin']['name'] ?></h6>
+                                    <p><?= $_SESSION['admin']['email'] ?></p>
+                                </div>
+                                <ul class="border-top">
+                                    <li><a href="team-profile.html">Profile</a></li>
+                                    <li><a href="faq.html">Help</a></li>
+                                    <li><a href="chatapp.html">Messages</a></li>
+                                    <li><a href="project-overview.html">Projects</a></li>
+                                    <li><a href="team-update.html">Settings</a></li>
+                                </ul>
+                                <ul class="border-top">
+                                    <li><a href="?act=admin-signout"><i class="ri-logout-circle-r-line"></i>Sign out</a></li>
+                                </ul>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
 	<meta name="description" content="Carrot - client.">
 	<meta name="author" content="ashishmaraviya">
 
-	<title>Carrot - client.</title>
+	<title>Carrot</title>
 
 	<!-- App favicon -->
     <link rel="shortcut icon" href="<?= BASE_URL ?>assets/client/assets/img/logo/favicon.png">

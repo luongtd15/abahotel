@@ -140,7 +140,7 @@ class User
     {
 
         try {
-            $sql = "SELECT * FROM users WHERE email = :email AND password = :password LIMIT 1";
+            $sql = "SELECT * FROM users WHERE email = :email AND password = :password AND role = 'Admin' LIMIT 1";
 
             $stmt = $this->pdo->prepare($sql);
 

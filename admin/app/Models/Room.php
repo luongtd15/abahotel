@@ -71,6 +71,39 @@ class Room
         }
     }
 
+    public function getAllRoomForReservation()
+    {
+        try {
+            $sql = "SELECT*FROM rooms";
+            $stmt = $this->pdo->query($sql);
+            return $stmt->fetchAll();
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+
+    public function getRoomByIDRoomType($id)
+    {
+        try {
+            $sql = "SELECT*FROM rooms WHERE id_room_type = $id LIMIT 1";
+            $stmt = $this->pdo->query($sql)->fetch();
+            if ($stmt !== false) {
+                $room = new Room();
+                $room->id = $stmt->id;
+                $room->id_room_type = $stmt->id_room_type;
+                $room->name = $stmt->name;
+                $room->image = $stmt->image;
+                $room->description = $stmt->description;
+                $room->status = $stmt->status;
+                return $room;
+            }
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+
     public function getRoomTypeList()
     {
         try {
@@ -142,4 +175,5 @@ class Room
             echo "<h1>Lỗi hàm update trong model: " . $error->getMessage() . "</h1>";
         }
     }
+
 }

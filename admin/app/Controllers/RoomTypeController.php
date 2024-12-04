@@ -131,7 +131,7 @@ class RoomTypeController
 
                 // If there are no errors, create room in database
                 if (empty($errors)) {
-                    $newRoomType = $this->roomTypeQuery->updateRoomType($id,$roomType);
+                    $newRoomType = $this->roomTypeQuery->updateRoomType($id, $roomType);
                     $_SESSION['success'] = 'Successfully updated this room type.';
                     header('location:' . BASE_URL_ADMIN . '?act=room-type-update&id=' . $room_type->id);
                     exit();
@@ -148,9 +148,16 @@ class RoomTypeController
     {
         // Kiểm tra giá trị id trước khi xử lý logic
         if ($id !== "") {
+            $room = $this->roomQuery->getRoomByIDRoomType($id);
+            $room_type = $this->roomTypeQuery->getRoomType($id);
 
-            $this->roomTypeQuery->deleteRoomType($id);
-            $_SESSION['success'] = 'Room type deleted successfully.';
+            if ($room->id_room_type == $room_type->id) {
+                $_SESSION['errs'] = "This room type is currently in use and cannot be deleted.";
+            } else {
+                $this->roomTypeQuery->deleteRoomType($id);
+                $_SESSION['success'] = 'Room type deleted successfully.';
+            }
+
             header('location:' . BASE_URL_ADMIN . '?act=room-type');
 
             // Code...
