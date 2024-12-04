@@ -38,7 +38,7 @@
                                 </div>
                                 <?php unset($_SESSION['success']) ?>
                             <?php endif; ?>
-                            <div class="table-responsive tbl-1200">
+                            <div class="table-responsive">
                                 <table id="vendor-list" class="table">
                                     <thead>
                                         <tr>
@@ -99,6 +99,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <script>

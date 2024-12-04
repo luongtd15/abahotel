@@ -141,7 +141,17 @@
             </div>
         </div>
         <div class="product-content row mb-minus-24" id="MixItUpDA2FB7">
-           
+            <!-- <div class="col-xl-3 col-lg-4 col-12 mb-24">
+
+                <div class="row mb-minus-24 sticky">
+                    <div class="col-lg-12 col-sm-6 col-6 cr-product-box mb-24">
+                        
+                    </div>
+                    <div class="col-lg-12 col-sm-6 col-6 cr-product-box banner-480 mb-24">
+                        
+                    </div>
+                </div>
+            </div> -->
 
             <div class="col-xl-1 col-lg-2 col-12 mb-24"></div>
 
@@ -155,6 +165,18 @@
                                     <div class="cr-image-inner zoom-image-hover">
                                         <img src="<?= BASE_URL . $room->r_image ?>" alt="product-1">
                                     </div>
+                                    <!-- <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div> -->
+                                    <!-- <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a> -->
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">

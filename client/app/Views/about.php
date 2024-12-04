@@ -72,7 +72,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="cr-about-image" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
-                    <img src="<?= BASE_URL ?>/uploads/page/22.jpg" alt="side-view">
+                    <img src="<?= BASE_URL ?>/uploads/page/1.jpg" alt="side-view">
                 </div>
             </div>
         </div>

@@ -54,10 +54,10 @@ class HomeModel
                     ORDER BY r_id DESC
                 ";
             $result = $this->db->pdo->query($sql)->fetchAll();
-            
+
             // Debugging: Hiển thị kết quả để kiểm tra
             var_dump($result);
-            
+
             return $result;
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -165,5 +165,4 @@ class HomeModel
             echo "Error: " . $e->getMessage();
         }
     }
-
 }

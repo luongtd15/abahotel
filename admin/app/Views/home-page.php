@@ -167,7 +167,7 @@
                                         <tr>
                                             <th>Room</th>
                                             <th>Name</th>
-                                            <th>Room Type</th>
+                                            <th>Type</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
@@ -219,7 +219,7 @@
                                         <tr>
                                             <th>Room</th>
                                             <th>Name</th>
-                                            <th>Room Type</th>
+                                            <th>Type</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>

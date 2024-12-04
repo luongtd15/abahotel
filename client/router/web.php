@@ -38,11 +38,11 @@ switch ($act) {
             break;
         }
     case 'reservation': {
-        $reservationController = new ReservationController;
-        $reservationController->ReservationSubmit();
+            $reservationController = new ReservationController;
+            $reservationController->ReservationSubmit();
 
-        break;
-    }
+            break;
+        }
 
 
     case 'room': {
@@ -93,16 +93,16 @@ switch ($act) {
         }
 
     case 'history_order': {
-        $roomController = new HomeController();
-        $roomController->historyOrder();
-        break;
-    }
+            $roomController = new HomeController();
+            $roomController->historyOrder();
+            break;
+        }
     case 'cancel': {
-        $reservationController = new ReservationController();
-        $reservationController->cancelReservation($_GET['id']);  // Gọi phương thức hủy đặt phòng
-    break;
-}
-   
+            $reservationController = new ReservationController();
+            $reservationController->cancelReservation($_GET['id']);  // Gọi phương thức hủy đặt phòng
+            break;
+        }
+
     default: {
             $homeController = new HomeController;
             $homeController->showDashboard();

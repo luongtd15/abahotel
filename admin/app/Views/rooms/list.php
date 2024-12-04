@@ -36,7 +36,7 @@
                                         <th>Room</th>
                                         <th>Name</th>
                                         <th>Room Type</th>
-                                        <th>Numer of beds</th>
+                                        <th>Beds</th>
                                         <th>Max Occupancy</th>
                                         <th>Status</th>
                                         <th>Description</th>

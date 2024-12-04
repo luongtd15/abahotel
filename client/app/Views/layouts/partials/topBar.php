@@ -52,7 +52,7 @@
                                             <a class="dropdown-item" href="?act=logout">Logout</a>
                                         </li>
                                     </ul>
-<?php endif; ?>
+                                <?php endif; ?>
 
                                 <?php if (!isset($_SESSION['user-client'])): ?>
                                     <a class="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)">
@@ -109,7 +109,7 @@
                                         aria-controls="v-pills-home" aria-selected="true">
                                         Dairy &amp; Bakery</button>
                                     <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-data-bs-target="#v-pills-profile" type="button" role="tab"
+                                        data-bs-target="#v-pills-profile" type="button" role="tab"
                                         aria-controls="v-pills-profile" aria-selected="false" tabindex="-1">
                                         Fruits &amp; Vegetable</button>
                                     <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
@@ -146,7 +146,7 @@ data-bs-target="#v-pills-profile" type="button" role="tab"
                                                 <h6 class="cr-col-title">Bakery</h6>
                                                 <ul class="cat-list">
                                                     <li><a href="shop-left-sidebar.html">Cake and
-Pastry</a>
+                                                            Pastry</a>
                                                     </li>
                                                     <li><a href="shop-left-sidebar.html">Rusk Toast</a>
                                                     </li>
@@ -186,7 +186,7 @@ Pastry</a>
                                                     </li>
                                                     <li><a href="shop-left-sidebar.html">Bell
                                                             Peppers</a></li>
-<li><a href="shop-left-sidebar.html">Broccoli</a>
+                                                    <li><a href="shop-left-sidebar.html">Broccoli</a>
                                                     </li>
                                                     <li><a href="shop-left-sidebar.html">Cabbage</a>
                                                     </li>
@@ -226,7 +226,7 @@ Pastry</a>
                                                     </li>
                                                     <li><a href="shop-left-sidebar.html">Pepper
                                                             Powder</a>
-</li>
+                                                    </li>
                                                     <li><a href="shop-left-sidebar.html">Long Pepper</a>
                                                     </li>
                                                 </ul>
@@ -267,7 +267,7 @@ Pastry</a>
                                                     </li>
                                                 </ul>
                                             </div>
-</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -315,7 +315,7 @@ Pastry</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="javascript:void(0)">
-                                    Rooms
+                                    Room Type
                                 </a>
 
                                 <ul class="dropdown-menu">
@@ -325,20 +325,96 @@ Pastry</a>
                                                 <?= htmlspecialchars($room['name'], ENT_QUOTES, 'UTF-8') ?>
                                             </a>
                                         </li>
-<?php endforeach; ?>
+                                    <?php endforeach; ?>
                                 </ul>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="?act=about">
-                                    About us
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                                    Pages
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="?act=about">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="contact-us.html">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="cart.html">Cart</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="track-order.html">Track Order</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="faq.html">Faq</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="login.html">Login</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="register.html">Register</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="policy.html">Policy</a>
+                                    </li>
+                                </ul>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/aba-hotel">
-                                    Contact us
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                                    Blog
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="blog-left-sidebar.html">Left
+                                            Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="blog-right-sidebar.html">Right
+                                            Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="blog-full-width.html">Full
+                                            Width</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="blog-detail-left-sidebar.html">Detail
+                                            Left
+                                            Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="blog-detail-right-sidebar.html">Detail
+                                            Right
+                                            Sidebar</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="blog-detail-full-width.html">Detail
+                                            Full
+                                            Width</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                                    Elements
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="elements-products.html">Products</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="elements-typography.html">Typography</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="elements-buttons.html">Buttons</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
