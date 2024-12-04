@@ -91,394 +91,380 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-12 md-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
-                <div class="cr-shop-sideview">
-                    <div class="cr-shop-categories">
-                        <h4 class="cr-shop-sub-title">Category 123</h4>
-                        <div class="cr-checkbox">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="drinks">
-                                <label for="drinks">Juice & Drinks</label>
-                                <span>[20]</span>
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-9 col-12 md-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+            <div class="row mb-minus-24">
+                <div class="col-md-6 col-12 mb-24">
+                    <div class="vehicle-detail-banner banner-content clearfix">
+                        <div class="banner-slider">
+                            <div class="slider slider-for">
+                                <div class="slider-banner-image">
+                                    <div class="zoom-image-hover">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-1"
+                                            class="product-image">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="drinks1">
-                                <label for="drinks1">Dairy & Milk</label>
-                                <span>[54]</span>
+                            <div class="slider slider-nav thumb-image">
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-1">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-2">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-3">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-1">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-2">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-3">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-1">
+                                    </div>
+                                </div>
+                                <div class="thumbnail-image">
+                                    <div class="thumbImg">
+                                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-2">
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="drinks2">
-                                <label for="drinks2">Snack & Spice</label>
-                                <span>[64]</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cr-shop-price">
-                        <h4 class="cr-shop-sub-title">Price</h4>
-                        <div class="price-range-slider">
-                            <div id="slider-range" class="range-bar"></div>
-                            <p class="range-value">
-                                <label>Price :</label>
-                                <input type="text" id="amount" placeholder="'" readonly>
-                            </p>
-                            <button type="button" class="cr-button">Filter</button>
-                        </div>
-                    </div>
-                    <div class="cr-shop-color">
-                        <h4 class="cr-shop-sub-title">Colors</h4>
-                        <div class="cr-checkbox">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="blue">
-                                <label for="blue">Blue</label>
-                                <span class="blue"></span>
-                            </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="yellow">
-                                <label for="yellow">Yellow</label>
-                                <span class="yellow"></span>
-                            </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="red">
-                                <label for="red">Red</label>
-                                <span class="red"></span>
-                            </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="green">
-                                <label for="green">Green</label>
-                                <span class="green"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cr-shop-weight">
-                        <h4 class="cr-shop-sub-title">Weight</h4>
-                        <div class="cr-checkbox">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="2kg">
-                                <label for="2kg">2kg Pack</label>
-                            </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="20kg">
-                                <label for="20kg">20kg Pack</label>
-                            </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="30kg">
-                                <label for="30kg">30kg pack</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cr-shop-tags">
-                        <h4 class="cr-shop-sub-title">Tages</h4>
-                        <div class="cr-shop-tags-inner">
-                            <ul class="cr-tags">
-                                <li><a href="javascript:void(0)">Vegetables</a></li>
-                                <li><a href="javascript:void(0)">juice</a></li>
-                                <li><a href="javascript:void(0)">Food</a></li>
-                                <li><a href="javascript:void(0)">Dry Fruits</a></li>
-                                <li><a href="javascript:void(0)">Vegetables</a></li>
-                                <li><a href="javascript:void(0)">juice</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-9 col-12 md-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
-                <div class="row mb-minus-24">
-                    <div class="col-md-6 col-12 mb-24">
-                        <div class="vehicle-detail-banner banner-content clearfix">
-                            <div class="banner-slider">
-                                <div class="slider slider-for">
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="/uploads/rooms/image1.jpg" alt="product-tab-1"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="assets/img/product/10.jpg" alt="product-tab-2"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="assets/img/product/11.jpg" alt="product-tab-3"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="assets/img/product/12.jpg" alt="product-tab-1"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="assets/img/product/13.jpg" alt="product-tab-2"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="assets/img/product/14.jpg" alt="product-tab-3"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="assets/img/product/15.jpg" alt="product-tab-1"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                    <div class="slider-banner-image">
-                                        <div class="zoom-image-hover">
-                                            <img src="assets/img/product/16.jpg" alt="product-tab-2"
-                                                 class="product-image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider slider-nav thumb-image">
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/9.jpg" alt="product-tab-1">
-                                        </div>
-                                    </div>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/10.jpg" alt="product-tab-2">
-                                        </div>
-                                    </div>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/11.jpg" alt="product-tab-3">
-                                        </div>
-                                    </div>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/12.jpg" alt="product-tab-1">
-                                        </div>
-                                    </div>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/13.jpg" alt="product-tab-2">
-                                        </div>
-                                    </div>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/14.jpg" alt="product-tab-3">
-                                        </div>
-                                    </div>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/15.jpg" alt="product-tab-1">
-                                        </div>
-                                    </div>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                            <img src="assets/img/product/16.jpg" alt="product-tab-2">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-6 col-12 mb-24">
+                    <div class="cr-size-and-weight-contain">
+                        <h2 class="heading"><?= $roomThis['name'] ?></h2>
                     </div>
-                    <div class="col-md-6 col-12 mb-24">
-                        <div class="cr-size-and-weight-contain">
-                            <h2 class="heading">Seeds Of Change Oraganic Quinoa, Brown</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, iure minus error
-                                doloribus saepe natus?</p>
+                    <div class="cr-size-and-weight">
+                        <div class="cr-review-star">
+                            <div class="cr-star">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p>( 75 Review )</p>
                         </div>
-                        <div class="cr-size-and-weight">
-                            <div class="cr-review-star">
-                                <div class="cr-star">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                                <p>( 75 Review )</p>
-                            </div>
-                            <div class="list">
-                                <ul>
-                                    <li><label>Brand <span>:</span></label>ESTA BETTERU CO</li>
-                                    <li><label>Flavour <span>:</span></label>Super Saver Pack</li>
-                                    <li><label>Diet Type <span>:</span></label>Vegetarian</li>
-                                    <li><label>Weight <span>:</span></label>200 Grams</li>
-                                    <li><label>Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
-                                    <li><label>Info <span>:</span></label>Egg Free, Allergen-Free</li>
-                                    <li><label>Items <span>:</span></label>1</li>
-                                </ul>
-                            </div>
-                            <div class="cr-product-price">
-                                <span class="new-price">$120.25</span>
-                                <span class="old-price">$123.25</span>
-                            </div>
-                            <div class="cr-size-weight">
-                                <h5><span>Size</span>/<span>Weight</span> :</h5>
-                                <div class="cr-kg">
-                                    <ul>
-                                        <li class="active-color">50kg</li>
-                                        <li>80kg</li>
-                                        <li>120kg</li>
-                                        <li>200kg</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="list">
+                        <ul>
+                                <li><label>Brand <span>:</span></label>Aba Hotel</li>
+                                <li><label>Location <span>:</span></label>City Center</li>
+                                <li><label>Room Type <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['name'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?></li>
+                                <li><label>Beds <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['number_of_beds'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?></li>
+                                    <li><label>Occupancy <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['max_occupancy'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?></li>
+                                <li><label>Amenities <span>:</span></label>Free Wi-Fi, Spa, Gym</li>
+                                <li><label>Specialty <span>:</span></label>Top-notch Service, City Views</li>
+                                <li><label>Info <span>:</span></label>24/7 Room Service, Airport Shuttle</li>
+                                <li><label>Price <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['price'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>$</li>
+                            </ul>
+                        </div>
+                        <?php if ($roomThis['status'] === 'occupied'): ?>
+                            <!-- Khi phòng đã được đặt -->
                             <div class="cr-add-card">
-                                <div class="cr-qty-main">
+                                <div class="room-status-alert">
+                                    <i class="ri-alert-line"></i>
+                                    <span>Room is full!</span>
+                                </div>
+                            </div>
+                        <?php else: ?>
+                            <!-- Khi phòng còn trống -->
+                            <div class="cr-add-card">
+                                <!-- <div class="cr-qty-main">
                                     <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
-                                           class="quantity">
+                                        class="quantity">
                                     <button type="button" id="add" class="plus">+</button>
                                     <button type="button" id="sub" class="minus">-</button>
-                                </div>
+                                </div> -->
                                 <div class="cr-add-button">
                                     <button type="button" class="cr-button cr-shopping-bag">Add to cart</button>
                                 </div>
                                 <div class="cr-card-icon">
-                                    <a href="javascript:void(0)" class="wishlist">
+                                    <!-- <a href="javascript:void(0)" class="wishlist">
                                         <i class="ri-heart-line"></i>
-                                    </a>
+                                    </a> -->
                                     <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview" role="button">
                                         <i class="ri-eye-line"></i>
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cr-paking-delivery">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
-                                    data-bs-target="#description" type="button" role="tab" aria-controls="description"
-                                    aria-selected="true">Description</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="additional-tab" data-bs-toggle="tab"
-                                    data-bs-target="#additional" type="button" role="tab" aria-controls="additional"
-                                    aria-selected="false">Information</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review"
-                                    type="button" role="tab" aria-controls="review"
-                                    aria-selected="false">Review</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="description" role="tabpanel"
-                             aria-labelledby="description-tab">
-                            <div class="cr-tab-content">
-                                <div class="cr-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente odio, error dolore vero temporibus consequatur, nobis veniam odit
-                                        dignissimos consectetur quae in perferendis
-                                        doloribusdebitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                </div>
-                                <h4 class="heading">Packaging & Delivery</h4>
-                                <div class="cr-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
-                            <div class="cr-tab-content">
-                                <div class="cr-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente
-                                        doloribus debitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                </div>
-                                <div class="list">
-                                    <ul>
-                                        <li><label>Brand <span>:</span></label>ESTA BETTERU CO</li>
-                                        <li><label>Flavour <span>:</span></label>Super Saver Pack</li>
-                                        <li><label>Diet Type <span>:</span></label>Vegetarian</li>
-                                        <li><label>Weight <span>:</span></label>200 Grams</li>
-                                        <li><label>Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
-                                        <li><label>Info <span>:</span></label>Egg Free, Allergen-Free</li>
-                                        <li><label>Items <span>:</span></label>1</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
-                            <div class="cr-tab-content-from">
-                                <div class="post">
-                                    <div class="content">
-                                        <img src="assets/img/review/1.jpg" alt="review">
-                                        <div class="details">
-                                            <span class="date">Jan 08, 2024</span>
-                                            <span class="name">Oreo Noman</span>
-                                        </div>
-                                        <div class="cr-t-review-rating">
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                        adipisci vel
-                                        perferendis dolor! quae vero in perferendis provident quis.</p>
-                                    <div class="content mt-30">
-                                        <img src="assets/img/review/2.jpg" alt="review">
-                                        <div class="details">
-                                            <span class="date">Mar 22, 2024</span>
-                                            <span class="name">Lina Wilson</span>
-                                        </div>
-                                        <div class="cr-t-review-rating">
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-line"></i>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                        adipisci vel
-                                        perferendis dolor! quae vero in perferendis provident quis.</p>
-                                </div>
+                        <?php endif; ?>
 
-                                <h4 class="heading">Add a Review</h4>
-                                <form action="javascript:void(0)">
-                                    <div class="cr-ratting-star">
-                                        <span>Your rating :</span>
-                                        <div class="cr-t-review-rating">
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-line"></i>
-                                            <i class="ri-star-s-line"></i>
-                                            <i class="ri-star-s-line"></i>
-                                        </div>
-                                    </div>
-                                    <div class="cr-ratting-input">
-                                        <input name="your-name" placeholder="Name" type="text">
-                                    </div>
-                                    <div class="cr-ratting-input">
-                                        <input name="your-email" placeholder="Email*" type="email" required="">
-                                    </div>
-                                    <div class="cr-ratting-input form-submit">
-                                        <textarea name="your-commemt" placeholder="Enter Your Comment"></textarea>
-                                        <button class="cr-button" type="submit" value="Submit">Submit</button>
-                                    </div>
-                                </form>
-                            </div>
+                        <!-- Add feedback form here -->
+                        <div class="cr-feedback-section mt-4">
+
+
+                            <?php if (isset($_SESSION['user-client'])): ?>
+
+                            <?php else: ?>
+                                <div class="alert alert-info">
+                                    Please <a href="<?= BASE_URL ?>?act=login">login</a> to submit a review
+                                </div>
+                            <?php endif; ?>
+
+                            <!-- Alert messages -->
+                            <?php if (isset($_SESSION['error'])): ?>
+                                <div class="alert alert-danger">
+                                    <?= $_SESSION['error'] ?>
+                                    <?php unset($_SESSION['error']); ?>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (isset($_SESSION['success'])): ?>
+                                <div class="alert alert-success">
+                                    <?= $_SESSION['success'] ?>
+                                    <?php unset($_SESSION['success']); ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- Hiển thị thông báo -->
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="alert alert-danger">
+                    <?= $_SESSION['error'] ?>
+                    <?php unset($_SESSION['error']); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION['success'])): ?>
+                <div class="alert alert-success">
+                    <?= $_SESSION['success'] ?>
+                    <?php unset($_SESSION['success']); ?>
+                </div>
+            <?php endif; ?>
+
+            <div class="cr-paking-delivery">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
+                            data-bs-target="#description" type="button" role="tab" aria-controls="description"
+                            aria-selected="true">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="additional-tab" data-bs-toggle="tab"
+                            data-bs-target="#additional" type="button" role="tab" aria-controls="additional"
+                            aria-selected="false">Information</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review"
+                            type="button" role="tab" aria-controls="review"
+                            aria-selected="false">Review</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel"
+                        aria-labelledby="description-tab">
+                        <div class="cr-tab-content">
+                            <div class="cr-description">
+                                <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its
+                                    prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                    attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                    all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                    creating a welcoming atmosphere that feels like a home away from home.</p>
+                            </div>
+                            <h4 class="heading">Packaging & Delivery</h4>
+                            <div class="cr-description">
+                                <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its
+                                    prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                    attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                    all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                    creating a welcoming atmosphere that feels like a home away from home.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
+                        <div class="cr-tab-content">
+                            <div class="cr-description">
+                                <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its
+                                    prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                    attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                    all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                    creating a welcoming atmosphere that feels like a home away from home.</p>
+                            </div>
+                            <div class="list">
+                            <ul>
+                                <li><label>Brand <span>:</span></label>Aba Hotel</li>
+                                <li><label>Location <span>:</span></label>City Center</li>
+                                <li><label>Room Type <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['name'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?></li>
+                                <li><label>Beds <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['number_of_beds'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?></li>
+                                    <li><label>Occupancy <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['max_occupancy'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?></li>
+                                <li><label>Amenities <span>:</span></label>Free Wi-Fi, Spa, Gym</li>
+                                <li><label>Specialty <span>:</span></label>Top-notch Service, City Views</li>
+                                <li><label>Info <span>:</span></label>24/7 Room Service, Airport Shuttle</li>
+                                <li><label>Price <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['price'] : null ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>$</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                        <div class="cr-tab-content-from">
+                            <div class="post">
+                                <?php foreach ($feedbacks as $feedback): ?>
+                                    <div class="content mt-30">
+
+                                        <div class="details">
+
+
+                                            <span class="name"><?= $feedback['user_name'] ?></span>
+                                            <span class="date"><?= $feedback['created_at'] ?></span>
+
+                                        </div>
+                                        <div class="cr-t-review-rating">
+                                            <?php
+                                            $feedbackController = new FeedbackController();
+                                            echo $feedbackController->displayStars($feedback['rating']);
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <p> <span class="date"><?= $feedback['comment'] ?></span></p>
+                                <?php endforeach; ?>
+
+                            </div>
+
+                            <h4 class="heading">Add a Review</h4>
+
+                            <div class="cr-feedback-section mt-4">
+
+                                <?php if (isset($_SESSION['user-client'])): ?>
+                                    <form class="cr-content-form" method="POST" action="<?= BASE_URL . '?act=feedback' ?>">
+                                        <!-- Hidden fields -->
+                                        <input type="hidden" name="id_room" value="<?= $roomThis['id'] ?>">
+                                        <input type="hidden" name="id_user" value="<?= $_SESSION['user-client']->id ?>">
+
+                                        <!-- Rating stars -->
+                                        <div class="cr-ratting-star mb-3">
+                                            <span>Your rating:</span>
+                                            <div class="rating">
+                                                <input type="radio" name="rating" value="5" id="rating-5" required>
+                                                <label for="rating-5"></label>
+                                                <input type="radio" name="rating" value="4" id="rating-4">
+                                                <label for="rating-4"></label>
+                                                <input type="radio" name="rating" value="3" id="rating-3">
+                                                <label for="rating-3"></label>
+                                                <input type="radio" name="rating" value="2" id="rating-2">
+                                                <label for="rating-2"></label>
+                                                <input type="radio" name="rating" value="1" id="rating-1">
+                                                <label for="rating-1"></label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Comment box -->
+                                        <div class="cr-ratting-input">
+                                            <textarea
+                                                name="comment"
+                                                class="form-control mb-3"
+                                                placeholder="Enter your feedback here..."
+                                                required></textarea>
+                                            <button type="submit" class="cr-button" name="feedback" value="1">
+                                                Send Review
+                                            </button>
+                                        </div>
+                                    </form>
+                                <?php else: ?>
+                                    <div class="alert alert-info">
+                                        Please <a href="<?= BASE_URL ?>?act=login">login</a> to submit a review
+                                    </div>
+                                <?php endif; ?>
+
+                                <!-- Alert messages -->
+                                <?php if (isset($_SESSION['error'])): ?>
+                                    <div class="alert alert-danger">
+                                        <?= $_SESSION['error'] ?>
+                                        <?php unset($_SESSION['error']); ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (isset($_SESSION['success'])): ?>
+                                    <div class="alert alert-success">
+                                        <?= $_SESSION['success'] ?>
+                                        <?php unset($_SESSION['success']); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Hiển thị thông báo -->
+                <?php if (isset($_SESSION['error'])): ?>
+                    <div class="alert alert-danger">
+                        <?= $_SESSION['error'] ?>
+                        <?php unset($_SESSION['error']); ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (isset($_SESSION['success'])): ?>
+                    <div class="alert alert-success">
+                        <?= $_SESSION['success'] ?>
+                        <?php unset($_SESSION['success']); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
 </section>
 
@@ -492,7 +478,7 @@
                         <h2>Popular Products</h2>
                     </div>
                     <div class="cr-banner-sub-title">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        <p>Aba ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                             ut labore et viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                 </div>
@@ -501,201 +487,317 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="cr-popular-product">
-                    <div class="slick-slide">
-                        <div class="cr-product-card">
-                            <div class="cr-product-image">
-                                <div class="cr-image-inner zoom-image-hover">
-                                    <img src="assets/img/product/9.jpg" alt="product-1">
-                                </div>
-                                <div class="cr-side-view">
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i class="ri-heart-line"></i>
-                                    </a>
-                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                       role="button">
-                                        <i class="ri-eye-line"></i>
-                                    </a>
-                                </div>
-                                <a class="cr-shopping-bag" href="javascript:void(0)">
-                                    <i class="ri-shopping-bag-line"></i>
-                                </a>
-                            </div>
-                            <div class="cr-product-details">
-                                <div class="cr-brand">
-                                    <a href="shop-left-sidebar.html">Snacks</a>
-                                    <div class="cr-star">
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-line"></i>
-                                        <p>(4.5)</p>
+                    <?php foreach ($rooms as $room): ?>
+
+                        <div class="slick-slide">
+                            <div class="cr-product-card">
+                                <div class="cr-product-image">
+                                    <div class="cr-image-inner zoom-image-hover">
+                                        <img src="<?= BASE_URL . $room->r_image ?>" alt="product-1">
                                     </div>
+                                    <!-- <div class="cr-side-view">
+                                        <a href="javascript:void(0)" class="wishlist">
+                                            <i class="ri-heart-line"></i>
+                                        </a>
+                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                            role="button">
+                                            <i class="ri-eye-line"></i>
+                                        </a>
+                                    </div> -->
+                                    <a class="cr-shopping-bag" href="javascript:void(0)">
+                                        <i class="ri-shopping-bag-line"></i>
+                                    </a>
                                 </div>
-                                <a href="product-left-sidebar.html" class="title">Best snakes with hazel nut
-                                    mix pack 200gm</a>
-                                <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                        class="old-price">$123.25</span></p>
+                                <div class="cr-product-details">
+                                    <div class="cr-brand">
+                                        <a href="shop-left-sidebar.html">Room</a>
+                                        <div class="cr-star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-line"></i>
+                                            <p>(4.5)</p>
+                                        </div>
+                                    </div>
+                                    <a href="?act=room-detail&id=<?= $room->r_id ?> " class="title"><?= $room->r_name ?></a>
+                                    <p class="cr-price"><span class="new-price"><?= $room->t_price ?>$</span>
+                                </div>
                             </div>
                         </div>
+                    <?php endforeach; ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Thêm modal popup vào cuối file, trước </section> -->
+<div class="modal fade" id="quickview" tabindex="-1" aria-labelledby="quickviewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quickviewLabel"><?= $roomThis['name'] ?></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="<?= $roomThis['name'] ?>" class="img-fluid">
                     </div>
-                    <div class="slick-slide">
-                        <div class="cr-product-card">
-                            <div class="cr-product-image">
-                                <div class="cr-image-inner zoom-image-hover">
-                                    <img src="assets/img/product/10.jpg" alt="product-1">
+                    <div class="col-md-6">
+                        <div class="product-details">
+                            <!-- Thêm form đặt phòng -->
+                            <form action="<?= BASE_URL ?>?act=reservation" method="POST" class="booking-form mt-3">
+                                <input type="hidden" name="room_id" value="<?= $roomThis['id'] ?>">
+
+                                <div class="mb-3">
+                                    <label for="checkin_date" class="form-label">Check-in Date:</label>
+                                    <input type="date"
+                                        class="form-control"
+                                        id="checkin_date"
+                                        name="checkin_date"
+                                        min="<?= date('Y-m-d') ?>"
+                                        required>
                                 </div>
-                                <div class="cr-side-view">
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i class="ri-heart-line"></i>
-                                    </a>
-                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                       role="button">
-                                        <i class="ri-eye-line"></i>
-                                    </a>
+
+                                <div class="mb-3">
+                                    <label for="checkout_date" class="form-label">Check-out Date:</label>
+                                    <input type="date"
+                                        class="form-control"
+                                        id="checkout_date"
+                                        name="checkout_date"
+                                        min="<?= date('Y-m-d', strtotime('+1 day')) ?>"
+                                        required>
                                 </div>
-                                <a class="cr-shopping-bag" href="javascript:void(0)">
-                                    <i class="ri-shopping-bag-line"></i>
-                                </a>
-                            </div>
-                            <div class="cr-product-details">
-                                <div class="cr-brand">
-                                    <a href="shop-left-sidebar.html">Snacks</a>
-                                    <div class="cr-star">
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <p>(5.0)</p>
+
+                                <div class="mb-3">
+                                    <label for="occupancy" class="form-label">Occupancy:</label>
+                                    <?php
+                                    // Debug để xem giá trị thực tế của id_room_type
+                                    $maxOccupancy = 2; // Giá trị mặc định
+
+                                    // Đổi sang sử dụng ID số thay vì text
+                                    switch ($roomThis['id_room_type']) {
+                                        case 2: // Suite
+                                            $maxOccupancy = 1;
+                                            break;
+                                        case 3: // Standard
+                                            $maxOccupancy = 4;
+                                            break;
+                                        case 1: // Deluxe
+                                            $maxOccupancy = 8;
+                                            break;
+                                    }
+                                    ?>
+                                    <input type="number"
+                                        class="form-control"
+                                        id="occupancy"
+                                        name="occupancy"
+                                        min="1"
+                                        max="<?= $maxOccupancy ?>"
+                                        value="1"
+                                        required>
+                                    <small class="form-text text-muted">
+                                        Maximum occupancy for 1 room: <?= $maxOccupancy ?> persons
+                                    </small>
+                                    <div id="occupancy-error" class="invalid-feedback">
+                                        Number of guests cannot exceed <?= $maxOccupancy ?> persons for this room type.
                                     </div>
                                 </div>
-                                <a href="product-left-sidebar.html" class="title">Sweet snakes crunchy nut
-                                    mix 250gm
-                                    pack</a>
-                                <p class="cr-price"><span class="new-price">$100.00</span> <span
-                                        class="old-price">$110.00</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slick-slide">
-                        <div class="cr-product-card">
-                            <div class="cr-product-image">
-                                <div class="cr-image-inner zoom-image-hover">
-                                    <img src="assets/img/product/1.jpg" alt="product-1">
-                                </div>
-                                <div class="cr-side-view">
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i class="ri-heart-line"></i>
-                                    </a>
-                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                       role="button">
-                                        <i class="ri-eye-line"></i>
-                                    </a>
-                                </div>
-                                <a class="cr-shopping-bag" href="javascript:void(0)">
-                                    <i class="ri-shopping-bag-line"></i>
-                                </a>
-                            </div>
-                            <div class="cr-product-details">
-                                <div class="cr-brand">
-                                    <a href="shop-left-sidebar.html">Snacks</a>
-                                    <div class="cr-star">
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-line"></i>
-                                        <p>(4.5)</p>
+                                <!-- Thêm ngay trước total price -->
+                                <div class="mb-3">
+                                    <label class="form-label"><strong>Payment Method:</strong></label>
+                                    <div class="payment-methods">
+                                        <?php if (isset($currentReservation) && is_array($currentReservation)): ?>
+                                            <?php foreach ($currentReservation as $method): ?>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" 
+                                                           type="radio" 
+                                                           name="payment_method" 
+                                                           id="<?= $method['payment_method'] ?>" 
+                                                           value="<?= $method['payment_method'] ?>" 
+                                                           required>
+                                                    <label class="form-check-label" for="<?= $method['payment_method'] ?>">
+                                                        <i class="<?= $method['payment_method'] === 'Bank Transfer' ? 'ri-bank-line' : 'ri-money-dollar-box-line' ?>"></i>
+                                                        <?= $method['payment_method'] ?>
+                                                    </label>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <!-- Fallback options nếu không có dữ liệu -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="payment_method" id="bank_transfer" value="Bank Transfer" required>
+                                                <label class="form-check-label" for="bank_transfer">
+                                                    <i class="ri-bank-line"></i> Bank Transfer
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="payment_method" id="cash" value="Cash" required>
+                                                <label class="form-check-label" for="cash">
+                                                    <i class="ri-money-dollar-box-line"></i> Cash
+                                                </label>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
-                                <a href="product-left-sidebar.html" class="title">Best snakes with hazel nut
-                                    mix pack 200gm</a>
-                                <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                        class="old-price">$123.25</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slick-slide">
-                        <div class="cr-product-card">
-                            <div class="cr-product-image">
-                                <div class="cr-image-inner zoom-image-hover">
-                                    <img src="assets/img/product/2.jpg" alt="product-1">
+                                <!-- Hiển thị giá cho người dùng xem -->
+                                <div class="total-price mb-3">
+                                    <strong>Total Price: </strong>
+                                    <span id="calculated_price">$<?= number_format($currentRoomType->price, 0) ?></span>
                                 </div>
-                                <div class="cr-side-view">
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i class="ri-heart-line"></i>
-                                    </a>
-                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                       role="button">
-                                        <i class="ri-eye-line"></i>
-                                    </a>
-                                </div>
-                                <a class="cr-shopping-bag" href="javascript:void(0)">
-                                    <i class="ri-shopping-bag-line"></i>
-                                </a>
-                            </div>
-                            <div class="cr-product-details">
-                                <div class="cr-brand">
-                                    <a href="shop-left-sidebar.html">Snacks</a>
-                                    <div class="cr-star">
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <p>(5.0)</p>
-                                    </div>
-                                </div>
-                                <a href="product-left-sidebar.html" class="title">Sweet snakes crunchy nut
-                                    mix 250gm
-                                    pack</a>
-                                <p class="cr-price"><span class="new-price">$100.00</span> <span
-                                        class="old-price">$110.00</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slick-slide">
-                        <div class="cr-product-card">
-                            <div class="cr-product-image">
-                                <div class="cr-image-inner zoom-image-hover">
-                                    <img src="assets/img/product/3.jpg" alt="product-1">
-                                </div>
-                                <div class="cr-side-view">
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i class="ri-heart-line"></i>
-                                    </a>
-                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                       role="button">
-                                        <i class="ri-eye-line"></i>
-                                    </a>
-                                </div>
-                                <a class="cr-shopping-bag" href="javascript:void(0)">
-                                    <i class="ri-shopping-bag-line"></i>
-                                </a>
-                            </div>
-                            <div class="cr-product-details">
-                                <div class="cr-brand">
-                                    <a href="shop-left-sidebar.html">Snacks</a>
-                                    <div class="cr-star">
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <p>(5.0)</p>
-                                    </div>
-                                </div>
-                                <a href="product-left-sidebar.html" class="title">Sweet snakes crunchy nut
-                                    mix 250gm
-                                    pack</a>
-                                <p class="cr-price"><span class="new-price">$100.00</span> <span
-                                        class="old-price">$110.00</span></p>
-                            </div>
+
+
+                                <!-- Input hidden để gửi giá trị -->
+                                <input type="hidden" name="total_price" id="total_price_input" value="<?= $currentRoomType->price ?>">
+
+                                <button type="submit" class="btn btn-primary" name="booknow">Book Now</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
+<!-- Thêm JavaScript để xử lý tính toán giá và validate dates -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkinInput = document.getElementById('checkin_date');
+        const checkoutInput = document.getElementById('checkout_date');
+        const priceDisplay = document.getElementById('calculated_price');
+        const totalPriceInput = document.getElementById('total_price_input');
+        const basePrice = <?= $currentRoomType->price ?? 0 ?>;
+
+        // Hàm tính số ngày giữa 2 ngày
+        function calculateDays(checkin, checkout) {
+            const start = new Date(checkin);
+            const end = new Date(checkout);
+            const diffTime = Math.abs(end - start);
+            return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        }
+
+        // Hàm tính tổng giá
+        function updateTotalPrice() {
+            const checkin = checkinInput.value;
+            const checkout = checkoutInput.value;
+
+            if (checkin && checkout) {
+                const days = calculateDays(checkin, checkout);
+                const total = basePrice * days;
+                
+                // Cập nhật hiển thị giá
+                priceDisplay.textContent = `$${total.toFixed(0)}`;
+                
+                // Cập nhật giá trị trong input hidden
+                totalPriceInput.value = total;
+            } else {
+                // Nếu chưa chọn ngày, hiển thị giá gốc
+                priceDisplay.textContent = `$${basePrice.toFixed(0)}`;
+                totalPriceInput.value = basePrice;
+            }
+        }
+
+        // Event listeners
+        checkinInput.addEventListener('change', function() {
+            // Set minimum checkout date to day after checkin
+            const minCheckout = new Date(this.value);
+            minCheckout.setDate(minCheckout.getDate() + 1);
+            checkoutInput.min = minCheckout.toISOString().split('T')[0];
+
+            // Clear checkout if it's before new minimum
+            if (checkoutInput.value && new Date(checkoutInput.value) <= new Date(this.value)) {
+                checkoutInput.value = '';
+            }
+
+            updateTotalPrice();
+        });
+
+        checkoutInput.addEventListener('change', updateTotalPrice);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const occupancyInput = document.getElementById('occupancy');
+        const maxOccupancy = <?= $maxOccupancy ?>;
+        const errorDiv = document.getElementById('occupancy-error');
+        const bookButton = document.querySelector('button[type="submit"]');
+
+        // Validate occupancy when input changes
+        occupancyInput.addEventListener('input', function() {
+            const value = parseInt(this.value);
+
+            if (value > maxOccupancy) {
+                occupancyInput.classList.add('is-invalid');
+                errorDiv.style.display = 'block';
+                bookButton.disabled = true;
+            } else if (value < 1) {
+                occupancyInput.classList.add('is-invalid');
+                errorDiv.textContent = 'Minimum occupancy is 1 person';
+                errorDiv.style.display = 'block';
+                bookButton.disabled = true;
+            } else {
+                occupancyInput.classList.remove('is-invalid');
+                errorDiv.style.display = 'none';
+                bookButton.disabled = false;
+            }
+        });
+
+        // Prevent form submission if occupancy is invalid
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const value = parseInt(occupancyInput.value);
+            if (value > maxOccupancy || value < 1) {
+                e.preventDefault();
+                occupancyInput.classList.add('is-invalid');
+                errorDiv.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+<style>
+    .invalid-feedback {
+        display: none;
+        color: red;
+        margin-top: 0.25rem;
+    }
+
+    input.is-invalid {
+        border-color: red;
+    }
+
+    input.is-invalid:focus {
+        border-color: red;
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+    }
+
+    .room-status-alert {
+        background-color: #ffe5e5;
+        color: #ff4444;
+        padding: 12px 20px;
+        border-radius: 8px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .room-status-alert i {
+        font-size: 20px;
+    }
+
+    .payment-methods {
+        margin-top: 10px;
+    }
+
+    .payment-methods .form-check {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+</style>

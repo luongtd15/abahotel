@@ -3,6 +3,7 @@
         <div class="cr-cart-inner">
             <div class="cr-cart-top">
                 <div class="cr-cart-title">
+                <a href="/aba-hotel" class="cr-logo">
                     <h6>My Cart</h6>
                     <button type="button" class="close-cart">×</button>
                 </div>

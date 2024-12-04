@@ -1,169 +1,148 @@
-<div class="cr-main-content">
-    <div class="container-fluid">
-        <!-- Page title & breadcrumb -->
-        <div class="cr-page-title cr-page-title-2">
-            <div class="cr-breadcrumb">
-                <h5 class="text-danger">ABA HOTEL - ROOM'S DETAILS</h5>
-                <ul>
-                    <li><a href="<?= BASE_URL_ADMIN ?>">ABA Hotel</a></li>
-                    <li>Rooms</li>
-                    <li>See room details</li>
-                </ul>
-            </div>
+<div class="cr-sidebar-overlay"></div>
+<div id="cr_mobile_menu" class="cr-side-cart cr-mobile-menu">
+    <div class="cr-menu-title">
+        <span class="menu-title">My Menu</span>
+        <button type="button" class="cr-close">×</button>
+    </div>
+    <div class="cr-menu-inner">
+        <div class="cr-menu-content">
+            <ul>
+                <li class="dropdown drop-list">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="dropdown drop-list">
+                    <span class="menu-toggle"></span>
+                    <a href="javascript:void(0)" class="dropdown-list">Category</a>
+                    <ul class="sub-menu">
+                        <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                        <li><a href="shop-right-sidebar.html">Shop Right sidebar</a></li>
+                        <li><a href="shop-full-width.html">Full Width</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown drop-list">
+                    <span class="menu-toggle"></span>
+                    <a href="javascript:void(0)" class="dropdown-list">product</a>
+                    <ul class="sub-menu">
+                        <li><a href="product-left-sidebar.html">product Left sidebar</a></li>
+                        <li><a href="product-right-sidebar.html">product Right sidebar</a></li>
+                        <li><a href="product-full-width.html">Product Full Width </a></li>
+                    </ul>
+                </li>
+                <li class="dropdown drop-list">
+                    <span class="menu-toggle"></span>
+                    <a href="javascript:void(0)" class="dropdown-list">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="faq.html">Faq</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="policy.html">Policy</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown drop-list">
+                    <span class="menu-toggle"></span>
+                    <a href="javascript:void(0)" class="dropdown-list">Blog</a>
+                    <ul class="sub-menu">
+                        <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
+                        <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
+                        <li><a href="blog-full-width.html">Full Width</a></li>
+                        <li><a href="blog-detail-left-sidebar.html">Detail Left Sidebar</a></li>
+                        <li><a href="blog-detail-right-sidebar.html">Detail Right Sidebar</a></li>
+                        <li><a href="blog-detail-full-width.html">Detail Full Width</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown drop-list">
+                    <span class="menu-toggle"></span>
+                    <a href="javascript:void(0)">Element</a>
+                    <ul class="sub-menu">
+                        <li><a href="elements-products.html">Products</a></li>
+                        <li><a href="elements-typography.html">Typography</a></li>
+                        <li><a href="elements-buttons.html">Buttons</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <style>
-            .label {
-                font-weight: bold;
-            }
-        </style>
-        <div class="row">
-            <div class="col-xxl-3 col-xl-4 col-md-12">
-                <div class="vendor-sticky-bar">
-                    <div class="col-xl-12">
-                        <div class="cr-card">
-                            <div class="cr-card-content">
-                                <div class="cr-vendor-block-img">
-                                    <div class="cr-vendor-block-detail">
-                                        <div class="profile-img">
-                                            <img class="v-img" src="<?= BASE_URL . $room->image ?>"
-                                                alt="vendor image">
-                                            <span class="tag-label online"></span>
-                                        </div>
-                                        <h5 class="name"><?= $room->name ?></h5>
-                                        <p>( example@support.com )</p>
-                                        <div class="cr-settings">
-                                            <a href="#" class="cr-btn-primary m-r-10">Edit Room</a>
+    </div>
+</div>
 
-                                        </div>
-                                    </div>
-                                    <div class="cr-vendor-info">
-                                        <ul>
-                                            <li><span class="label">Room Type :</span>&nbsp;
-                                                <?php foreach ($room_types as $room_type): ?>
-                                                    <?= $room->id_room_type == $room_type->id ? $room_type->name : null ?>
-                                                <?php endforeach; ?>
-                                            </li>
-                                            <li><span class="label">Number of beds:</span>&nbsp;
-                                                <?php foreach ($room_types as $room_type): ?>
-                                                    <?= $room->id_room_type == $room_type->id ? $room_type->number_of_beds : null ?>
-                                                <?php endforeach; ?>
-                                            </li>
-                                            <li><span class="label">Max occupancy :</span>&nbsp;
-                                                <?php foreach ($room_types as $room_type): ?>
-                                                    <?= $room->id_room_type == $room_type->id ? $room_type->max_occupancy : null ?>
-                                                <?php endforeach; ?>
-                                            </li>
-                                            <li><span class="label">Status :</span>&nbsp;<?= $room->status ?></li>
-                                            <li><span class="label">Price :</span>&nbsp;
-                                                <?php foreach ($room_types as $room_type): ?>
-                                                    <?= $room->id_room_type == $room_type->id ? $room_type->price : null ?>
-                                                <?php endforeach; ?>
-                                                $
-                                            </li>
-                                            <li><span class="label">Description :</span>&nbsp;<?= $room->description ?></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-9 col-xl-8 col-md-12">
-
-                <div class="cr-card vendor-profile">
-                    <div class="cr-card-content vendor-details mb-m-30">
-
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h3>Room Details</h3>
-                                <div class="cr-vendor-detail">
-                                    <p class="color-success">You can see details of this room below.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="cr-vendor-detail">
-                                    <h6>Room name:
-                                        <span class="color-primary">
-                                            <?= $room->name ?>
-                                        </span>
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="cr-vendor-detail">
-                                    <h6>Room type:
-                                        <span class="color-primary">
-                                            <?php foreach ($room_types as $room_type): ?>
-                                                <?= $room->id_room_type == $room_type->id ? $room_type->name : null ?>
-                                            <?php endforeach; ?>
-                                        </span>
-                                    </h6>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="cr-vendor-detail">
-                                    <h6>Number of beds
-                                        <span class="color-primary">
-                                            <?php foreach ($room_types as $room_type): ?>
-                                                <?= $room->id_room_type == $room_type->id ? $room_type->number_of_beds : null ?>
-                                            <?php endforeach; ?>
-                                        </span>
-                                    </h6>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="cr-vendor-detail">
-                                    <h6>Max occupancy
-                                        <span class="color-primary">
-                                            <?php foreach ($room_types as $room_type): ?>
-                                                <?= $room->id_room_type == $room_type->id ? $room_type->max_occupancy : null ?>
-                                            <?php endforeach; ?>
-                                        </span>
-                                    </h6>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="cr-vendor-detail">
-                                    <h6>Status
-                                        <span class="color-primary">
-                                            <?= ucfirst($room->status) ?>
-                                        </span>
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="cr-vendor-detail">
-                                    <h6>Price
-                                        <span class="color-primary">
-                                            <?php foreach ($room_types as $room_type): ?>
-                                                <?= $room->id_room_type == $room_type->id ? $room_type->price : null ?>
-                                            <?php endforeach; ?>
-                                            $
-                                        </span>
-                                    </h6>
-
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                                <div class="cr-vendor-detail">
-                                    <h6>Description</h6>
-                                    <ul>
-                                        <li>
-                                            <?= $room->description ?>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
+<!-- Breadcrumb -->
+<section class="section-breadcrumb">
+    <div class="cr-breadcrumb-image">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cr-breadcrumb-title">
+                        <h2>Room</h2>
+                        <span> <a href="index.html"></a> - Room</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Room -->
+<section class="section-shop padding-tb-100">
+    <div class="container">
+        <div class="row d-none">
+            <div class="col-lg-12">
+                <div class="mb-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                    <div class="cr-banner">
+                        <h2>Categories</h2>
+                    </div>
+                    <div class="cr-banner-sub-title">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore lacus vel facilisis. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-12 md-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+
+                    </div>
+                </div>
+                <div class="row col-100 mb-minus-24">
+                    <?php foreach ($rooms as $room): ?>
+
+                    <div class="col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                        <div class="cr-product-card">
+                            <div class="cr-product-image">
+                                <div class="cr-image-inner zoom-image-hover">
+                                    <img src="<?= BASE_URL . $room['image']?>" alt="product-1">
+                                </div>
+                                <a class="cr-shopping-bag" href="javascript:void(0)">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </a>
+                            </div>
+                            <div class="cr-product-details">
+                                <div class="cr-brand">
+                                    <a href="#">Room</a>
+                                    <div class="cr-star">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <p>(4.5)</p>
+                                    </div>
+                                </div>
+                                <a href="?act=room-detail&id=<?php echo $room['id'] ?> " class="title">
+                                    <?php echo $room['name'] ?>
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -20,7 +20,24 @@
                     <div class="cr-card-content">
                         <div class="row cr-product-uploads">
                             <div class="col-lg-4 mb-991">
-
+                                <div class="cr-vendor-img-upload">
+                                    <div class="cr-vendor-main-img">
+                                        <div class="avatar-upload">
+                                            <!-- <div class="avatar-edit">
+                                                <input type='file' id="product_main" class="cr-image-upload"
+                                                    accept=".png, .jpg, .jpeg">
+                                                <label></label>
+                                            </div> -->
+                                            <div class="avatar-preview cr-preview">
+                                                <div class="imagePreview cr-div-preview">
+                                                    <img class="cr-image-preview"
+                                                        src="<?= BASE_URL ?>assets/client/assets/img/categories/z6083672492216_92c3f7bb57429eac5676ee7ae4314b7b.jpg"
+                                                        alt="edit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="col-lg-8">

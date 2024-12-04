@@ -151,7 +151,7 @@ class RoomController
                 if (empty($errors)) {
                     $newRoom = $this->roomQuery->update($id, $room);
                     $_SESSION['success'] = 'Successfully updated ' . $room->name;
-                    header('location:' . BASE_URL_ADMIN . '?act=room');
+                    header('location:' . BASE_URL_ADMIN . '?act=room-update&id=' . $_GET['id']);
                     exit();
                 } else {
                     $_SESSION['errs'] = $errors;

@@ -18,4 +18,7 @@ class Database{
             echo $e->getMessage();
         }
     }
+    public function getConnect() {
+        return $this->pdo;
+    }
 }

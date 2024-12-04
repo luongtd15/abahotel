@@ -21,60 +21,30 @@ class Room
         $this->pdo = null;
     }
 
-    public function getRoomList()
-    {
 
-        try {
-            $sql =
-                "
-                SELECT 
-    r.id AS r_id,
-    r.id_room_type AS r_id_room_type,
-    r.name AS r_name,
-    r.status AS r_status,
-    r.description AS r_description,
-    t.name AS t_name,
-    t.price AS t_price,
-    t.number_of_beds AS t_number_of_beds,
-    t.max_occupancy AS t_max_occupancy
-FROM 
-    rooms AS r
-INNER JOIN 
-    room_types AS t ON r.id_room_type = t.id_room_type
-ORDER BY 
-    r.id_room DESC;
-
-
-            ";
-
-            $stmt = $this->pdo->query($sql);
-            return $stmt->fetchAll();
-        } catch (Exception $err) {
-            echo "Error: " . $err->getMessage() . "<hr>";
-            return [];
-        }
-    }
 
     public function getRoom($id)
     {
         try {
-            $sql = "SELECT*FROM rooms WHERE id = $id";
-            $stmt = $this->pdo->query($sql)->fetch();
-            if ($stmt !== false) {
-                $room = new Room();
-                $room->id = $stmt->id;
-                $room->id_room_type = $stmt->id_room_type;
-                $room->name = $stmt->name;
-                $room->image = $stmt->image;
-                $room->description = $stmt->description;
-                $room->status = $stmt->status;
-                return $room;
-            }
+            $sql = "SELECT*FROM rooms WHERE id_room_type = $id";
+            return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         } catch (Exception $err) {
             echo "Error: " . $err->getMessage() . "<hr>";
             return [];
         }
     }
+
+    public function getRoomThis($id)
+    {
+        try {
+            $sql = "SELECT * FROM rooms WHERE id = $id";
+            return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+
     public function getDetailRoom($id)
     {
         try {
@@ -185,4 +155,49 @@ ORDER BY
         $stmt = $this->pdo->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getRoomTypeById($id)
+    {
+        try {
+            $sql = "SELECT rt.*, rt.price 
+                    FROM room_types rt 
+                    WHERE rt.id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+            return null;
+        }
+    }
+    
+    public function getRoomList()
+    {
+        try {
+            $sql =
+                "
+                SELECT 
+                    r.id                        AS r_id,
+                    r.id_room_type              AS r_id_room_type,
+                    r.name                      AS r_name,
+                    r.image                     AS r_image,
+                    r.status                    AS r_status,
+                    r.description               AS r_description,
+                    t.name                      AS t_name,
+                    t.price                     AS t_price,
+                    t.number_of_beds            AS t_number_of_beds,
+                    t.max_occupancy             AS t_max_occupancy
+                FROM rooms AS r
+                INNER JOIN room_types AS t ON t.id = r.id_room_type
+                ORDER BY r_id DESC
+            ";
+
+            $stmt = $this->pdo->query($sql);
+            return $stmt->fetchAll();
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+
 }
