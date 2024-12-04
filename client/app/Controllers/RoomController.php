@@ -171,19 +171,44 @@ class RoomController
 
     public function showDetailOfThisRoom($id)
     {
-        $room = $this->roomQuery->getRoom($id);
-        $room_types = $this->roomQuery->getRoomTypeList();
+        $homeModel = new HomeModel();
+
+        $roomType = $homeModel->getRoomTypeForHome();
+        $rooms = $this->roomQuery->getRoom($id);
+        
+        $feedbackModel = new Feedback();
+        $feedbacks = $feedbackModel->getallfeedback($id);
+
         $view = 'rooms/detail';
-        include 'app/Views/layouts/master.php';
-    } 
-    public function showDetailOfThisRoomClient($id)
+        include 'client/app/Views/layouts/master.php';
+    }
+
+    public function showRoom($id)
     {
-        $room = $this->roomQuery->getRoom($id);
-        $room_types = $this->roomQuery->getRoomTypeList();
-        $view = 'rooms/detail-client';
-        include 'app/Views/layouts/master.php';
-    } 
-    
+        $homeModel = new HomeModel();
+        
+        // Lấy thông tin room type bao gồm cả giá
+        $roomType = $homeModel->getRoomTypeForHome();
+        $roomThis = $this->roomQuery->getRoomThis($id);
+        $rooms = $this->roomQuery->getRoomList();
+
+        // Lấy thông tin chi tiết của room type hiện tại, bao gồm giá
+        $currentRoomType = $this->roomQuery->getRoomTypeById($roomThis['id_room_type']);
+        
+        $roomsAll = $this->roomQuery->getRoom($roomThis['id_room_type']);
+        $feedbackModel = new Feedback();
+        $feedbacks = $feedbackModel->getallfeedback($id);
+
+        // Debug để kiểm tra dữ liệu
+        // echo "<pre>";
+        // print_r($currentRoomType);
+        // echo "</pre>";
+
+        $view = 'rooms/detail-addtocart';
+        include 'client/app/Views/layouts/master.php';
+    }
+
+
    
 
  }

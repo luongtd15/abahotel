@@ -3287,6 +3287,18 @@ Tools sidebar
 .cr-card .label-card .title .icon.icon-4 i {
   color: #ff9800;
 }
+.cr-card .label-card .title .icon.icon-5 {
+  background-color: rgba(174, 154, 205, 0.652);
+}
+.cr-card .label-card .title .icon.icon-5 i {
+  color: rgba(104, 84, 145, 1);
+}
+.cr-card .label-card .title .icon.icon-6 {
+  background-color: rgba(255, 203, 247, 0.634);
+}
+.cr-card .label-card .title .icon.icon-6 i {
+  color: purple;
+}
 .cr-card .label-card .title h4 {
   margin-bottom: 12px;
   color: #777;

@@ -11,7 +11,6 @@ class UserController
 
     public function createUser()
     {
-        // var_dump("Function called");
         $thongBaoLoi = "";
         $thongBaoThanhCong = "";
         //         var_dump($thongBaoLoi);
@@ -108,6 +107,7 @@ class UserController
 
                 // Nếu đăng nhập thành công, lưu thông tin vào session và chuyển hướng về trang chủ
                 if ($user) {
+                    // $_SESSION['id_user'] = $user['id_user'];
                     $_SESSION['user-client'] = $user;
                     header("Location: " . BASE_URL);
                     exit();
@@ -121,5 +121,10 @@ class UserController
                 }
             }
         }
+    }
+
+    public function logout(){
+        if(isset($_SESSION['user-client'])) unset($_SESSION['user-client']);
+        header('location:' . BASE_URL);
     }
 }

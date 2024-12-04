@@ -95,6 +95,7 @@
                                     <div class="thumbImg">
                                         <img src="./assets/client/assets/img/product/16.jpg" alt="product-tab-2">
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -103,10 +104,11 @@
                 <div class="col-xxl-8 col-xl-7 col-md-6 col-12 mb-24">
                     <div class="cr-size-and-weight-contain">
                         <h2 class="heading">Better Munch - Sweet Crunchy Nut Mix - Roasted Almonds, Dried Dates and Coconuts.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sequi unde libero ea
-                            odio aperiam ex alias quod? Tempora, magnam? Reprehenderit incidunt repudiandae officia eius
-                            a ullam. Recusandae quia aliquid ratione est quis voluptatibus magni porro a.
-                            Necessitatibus, tenetur ducimus.</p>
+                        <p><p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its 
+                                        prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                         attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                          all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                           creating a welcoming atmosphere that feels like a home away from home.</p>
                     </div>
                     <div class="cr-size-and-weight">
                         <div class="cr-review-star">
@@ -124,7 +126,7 @@
                                 <li><label>Brand <span>:</span></label>ESTA BETTERU CO</li>
                                 <li><label>Flavour <span>:</span></label>Super Saver Pack</li>
                                 <li><label>Diet Type <span>:</span></label>Vegetarian</li>
-                                <li><label>Weight <span>:</span></label>200 Grams</li>
+                                <!-- <li><label>Weight <span>:</span></label>200 Grams</li> -->
                                 <li><label>Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
                                 <li><label>Info <span>:</span></label>Egg Free, Allergen-Free</li>
                                 <li><label>Items <span>:</span></label>1</li>
@@ -136,14 +138,14 @@
                         </div>
                         <div class="cr-size-weight">
                             <h5><span>Size</span>/<span>Weight</span> :</h5>
-                            <div class="cr-kg">
+                            <!-- <div class="cr-kg">
                                 <ul>
                                     <li class="active-color">50kg</li>
                                     <li>80kg</li>
                                     <li>120kg</li>
                                     <li>200kg</li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="cr-add-card">
                             <div class="cr-qty-main">
@@ -192,39 +194,37 @@
                                 aria-labelledby="description-tab">
                                 <div class="cr-tab-content">
                                     <div class="cr-description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente odio, error dolore vero temporibus consequatur, nobis veniam odit
-                                            dignissimos consectetur quae in perferendis
-                                            doloribusdebitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                            perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                            ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                            laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
+                                    <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its 
+                                        prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                         attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                          all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                           creating a welcoming atmosphere that feels like a home away from home.</p>
                                     </div>
                                     <h4 class="heading">Packaging & Delivery</h4>
                                     <div class="cr-description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                            ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                            laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
+                                    <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its 
+                                        prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                         attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                          all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                           creating a welcoming atmosphere that feels like a home away from home.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
                                 <div class="cr-tab-content">
                                     <div class="cr-description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente
-                                            doloribus debitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                            perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                            ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                            laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
+                                    <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its 
+                                        prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                         attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                          all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                           creating a welcoming atmosphere that feels like a home away from home.</p>
                                     </div>
                                     <div class="list">
                                         <ul>
                                             <li><label>Brand <span>:</span></label>ESTA BETTERU CO</li>
                                             <li><label>Flavour <span>:</span></label>Super Saver Pack</li>
                                             <li><label>Diet Type <span>:</span></label>Vegetarian</li>
-                                            <li><label>Weight <span>:</span></label>200 Grams</li>
+                                            <!-- <li><label>Weight <span>:</span></label>200 Grams</li> -->
                                             <li><label>Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
                                             <li><label>Info <span>:</span></label>Egg Free, Allergen-Free</li>
                                             <li><label>Items <span>:</span></label>1</li>
@@ -249,10 +249,11 @@
                                                 <i class="ri-star-s-fill"></i>
                                             </div>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                            adipisci vel
-                                            perferendis dolor! quae vero in perferendis provident quis.</p>
+                                        <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its 
+                                        prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                         attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                          all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                           creating a welcoming atmosphere that feels like a home away from home.</p>
                                         <div class="content mt-30">
                                             <img src="./assets/client/assets/img/review/2.jpg" alt="review">
                                             <div class="details">
@@ -267,10 +268,11 @@
                                                 <i class="ri-star-s-line"></i>
                                             </div>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                            adipisci vel
-                                            perferendis dolor! quae vero in perferendis provident quis.</p>
+                                        <p>Aba Hotel is a sophisticated haven designed to redefine luxury and relaxation. With its 
+                                        prime location in the heart of the city, the hotel offers guests seamless access to vibrant
+                                         attractions, business hubs, and cultural landmarks, ensuring an unforgettable experience for
+                                          all who visit. Each stay at Aba Hotel is marked by exceptional service and attention to detail,
+                                           creating a welcoming atmosphere that feels like a home away from home.</p>
                                     </div>
 
                                     <h4 class="heading">Add a Review</h4>
@@ -316,7 +318,7 @@
                             <h2>Popular Products</h2>
                         </div>
                         <div class="cr-banner-sub-title">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            <p>Aba ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et viverra maecenas accumsan lacus vel facilisis. </p>
                         </div>
                     </div>

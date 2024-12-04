@@ -111,6 +111,42 @@ switch ($act) {
             break;
         }
 
+    case 'invoice': {
+            $reservationController = new ReservationController();
+            $reservationController->showInvoiceList();
+            break;
+        }
+
+    case 'invoice-update': {
+            $reservationController = new ReservationController();
+            $reservationController->updateThisReservation($_GET['id']);
+            break;
+        }
+
+    case 'invoice-detail': {
+            $reservationController = new ReservationController();
+            $reservationController->showThisInvoiceDetail($_GET['id']);
+            break;
+        }
+
+    case 'feedback': {
+            $feedbackController = new FeedbackController();
+            $feedbackController->showFeedbackList();
+            break;
+        }
+
+    case 'feedback-delete': {
+            $feedbackController = new FeedbackController();
+            $feedbackController->deleteThisFeedback($_GET['id']);
+            break;
+        }
+
+    case 'feedback-detail': {
+            $feedbackController = new FeedbackController();
+            $feedbackController->showDetailOfThisFeedback($_GET['id']);
+            break;
+        }
+
     default: {
             $homeController = new HomeController;
             $homeController->showDashboard();

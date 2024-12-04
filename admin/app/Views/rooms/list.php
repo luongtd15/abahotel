@@ -36,7 +36,7 @@
                                         <th>Room</th>
                                         <th>Name</th>
                                         <th>Room Type</th>
-                                        <th>Numer of beds</th>
+                                        <th>Beds</th>
                                         <th>Max Occupancy</th>
                                         <th>Status</th>
                                         <th>Description</th>
@@ -60,7 +60,7 @@
                                             <td><?= $room->t_number_of_beds ?></td>
                                             <td><?= $room->t_max_occupancy ?></td>
                                             <td>
-                                                <?= $room->r_status == 'available' ?
+                                                <?= $room->r_status == STATUS_AVAILABLE ?
                                                     '<span class="color-secondary">available</span>' :
                                                     '<span class="color-primary">occupied</span>' ?>
                                             </td>
@@ -76,7 +76,6 @@
                                                                 class="ri-settings-3-line"></i></span>
                                                     </button>
                                                     <div class="dropdown-menu">
-
                                                         <a class="dropdown-item text-warning" href="?act=room-update&id=<?= $room->r_id ?>">Edit</a>
                                                         <a class="dropdown-item text-body-tertiary" href="?act=room-delete&id=<?= $room->r_id ?>" onclick="return confirmDelete()">Delete</a>
                                                     </div>

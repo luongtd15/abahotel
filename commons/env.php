@@ -22,6 +22,18 @@ define('STATUS_OCCUPIED', 'occupied');
 define('ROLE_ADMIN', 'Admin');
 define('ROLE_CUSTOMER', 'Customer');
 
+define('PENDING', 'Pending');
+define('CONFIRM', 'Confirmed');
+define('CHECKIN', 'Checked-in');
+define('CHECKOUT', 'Checked-out');
+define('CANCEL', 'Cancelled');
+
+define('CASH', 'Cash');
+define('BANK', 'Bank Transfer');
+
+define('COMPLETE', 'Completed');
+define('FAIL', 'Failed');
+
 
 
 
