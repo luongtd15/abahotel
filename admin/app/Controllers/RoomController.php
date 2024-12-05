@@ -79,14 +79,22 @@ class RoomController
     {
         // Kiểm tra giá trị id trước khi xử lý logic
         if ($id !== "") {
+
             $room = $this->roomQuery->getRoom($id);
+            $feedbacks = $this->roomQuery->getReservationForRoom($id);
+            $reservations = $this->roomQuery->getFeedbackForRoom($id);
 
             if (!empty($room->image) && file_exists(PATH_UPLOAD . $room->image)) {
                 unlink(PATH_UPLOAD . $room->image);
             }
 
-            $this->roomQuery->delete($id);
-            $_SESSION['success'] = 'Room and associated image deleted successfully.';
+            if (empty($feedbacks) && empty($reservations)) {
+                $this->roomQuery->delete($id);
+                $_SESSION['success'] = 'Room and associated image deleted successfully.';
+            } else {
+                $_SESSION['errs'] = "This room is currently in use and cannot be deleted.";
+            }
+
             header('location:' . BASE_URL_ADMIN . '?act=room');
 
             // Code...
@@ -166,6 +174,8 @@ class RoomController
     {
         $room = $this->roomQuery->getRoom($id);
         $room_types = $this->roomQuery->getRoomTypeList();
+
+
         $view = 'rooms/detail';
         include 'app/Views/layouts/master.php';
     }

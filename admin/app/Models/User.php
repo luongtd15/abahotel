@@ -155,4 +155,31 @@ class User
             return null;
         }
     }
+
+    public function getFeedbackForUser($id)
+    {
+        try {
+            $sql = "select * from feedbacks WHERE id_user = $id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+    public function getReservationForUser($id)
+    {
+        try {
+            $sql = "select * from reservations WHERE id_user = $id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+
+
 }

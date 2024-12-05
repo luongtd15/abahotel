@@ -32,6 +32,16 @@
                     </div>
                     <div class="cr-card-content card-default">
                         <div class="deal-table">
+
+                            <?php if (isset($_SESSION['errs'])) : ?>
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        <li><?= $_SESSION['errs'] ?></li>
+                                    </ul>
+                                </div>
+                                <?php unset($_SESSION['errs']) ?>
+                            <?php endif; ?>
+
                             <?php if (isset($_SESSION['success'])) : ?>
                                 <div class="alert alert-success">
                                     <?= $_SESSION['success'] ?>
