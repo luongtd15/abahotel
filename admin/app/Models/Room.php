@@ -176,4 +176,30 @@ class Room
         }
     }
 
+    public function getFeedbackForRoom($id)
+    {
+        try {
+            $sql = "select * from feedbacks WHERE id_room = $id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+    public function getReservationForRoom($id)
+    {
+        try {
+            $sql = "select * from reservations WHERE id_room = $id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (Exception $err) {
+            echo "Error: " . $err->getMessage() . "<hr>";
+            return [];
+        }
+    }
+
+
 }

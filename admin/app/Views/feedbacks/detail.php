@@ -65,6 +65,9 @@
                                             <div class="label text-secondary"><i class="ri-money-dollar-circle-line"></i> Comment:</div>
                                             <strong class="text-success"><?= $feedback->comment ?></strong>
                                         </li>
+                                        <li class="list-group-item d-flex flex-column mb-2">
+                                            <a href="?act=feedback-delete&id=<?= $feedback->id ?>" class="btn btn-danger" onclick="return confirmDelete()"><i class="ri-delete-bin-line"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -75,3 +78,8 @@
         </div>
     </div>
 </div>
+<script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this room?");
+    }
+</script>

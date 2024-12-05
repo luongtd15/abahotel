@@ -171,9 +171,16 @@ class UserController
         // Kiểm tra giá trị id trước khi xử lý logic
         if ($id !== "") {
             $user = $this->userQuery->getUser($id);
+            $feedbacks = $this->userQuery->getReservationForUser($id);
+            $reservations = $this->userQuery->getFeedbackForUser($id);
 
-            $this->userQuery->deleteUser($id);
-            $_SESSION['success'] = 'User deleted successfully.';
+            if (empty($feedbacks) && empty($reservations)) {
+                $this->userQuery->deleteUser($id);
+                $_SESSION['success'] = 'User deleted successfully.';
+            } else {
+                $_SESSION['errs'] = "This user is currently in use and cannot be deleted.";
+            }
+
             header('location:' . BASE_URL_ADMIN . '?act=user');
 
             // Code...
@@ -213,11 +220,12 @@ class UserController
         include 'app/Views/users/signin.php';
     }
 
-    function adminSignout(){
-        if(!empty($_SESSION['admin'])){
+    function adminSignout()
+    {
+        if (!empty($_SESSION['admin'])) {
             unset($_SESSION['admin']);
-        } 
-    
+        }
+
         header('location:' . BASE_URL_ADMIN);
         exit();
     }

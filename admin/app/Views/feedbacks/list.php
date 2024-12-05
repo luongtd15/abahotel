@@ -74,7 +74,7 @@
                                                 </td>
                                                 <td>
                                                     <a href="?act=feedback-detail&id=<?= $feedback->id ?>" class="btn btn-info"><i class="ri-eye-2-line"></i></a>
-                                                    <a href="?act=feedback-delete&id=<?= $feedback->id ?>" class="btn btn-danger" onclick="return confirmDelete()"><i class="ri-delete-bin-line"></i></a>
+                                                    
                                                 </td>
 
                                             </tr>
@@ -92,8 +92,3 @@
     </div>
 </div>
 
-<script>
-    function confirmDelete() {
-        return confirm("Are you sure you want to delete this room?");
-    }
-</script>
