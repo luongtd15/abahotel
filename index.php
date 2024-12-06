@@ -12,6 +12,7 @@ include 'client/app/Models/User.php';
 include 'client/app/Models/SearchModel.php';
 include 'client/app/Models/FeedbackModel.php';
 include 'client/app/Models/ReservationModel.php';
+include 'client/app/Models/PaymentModel.php';
 
 
 
@@ -24,6 +25,7 @@ include 'client/app/Controllers/UserController.php';
 require_once 'client/app/Controllers/SearchController.php';
 include 'client/app/Controllers/FeedbackController.php';
 include 'client/app/Controllers/ReservationController.php';
+include 'client/app/Controllers/PaymentController.php';
 
 
 

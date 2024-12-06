@@ -43,7 +43,17 @@ switch ($act) {
 
             break;
         }
+    case 'pay': {
+            $paymentController = new PaymentController();
+            $paymentController->payment($_GET['id']);
+            break;
+        }
 
+    case 'status-change': {
+            $paymentController = new ReservationController();
+            $paymentController->changeThisReservationStatus($_GET['id']);
+            break;
+        }
 
     case 'room': {
             $roomController = new RoomController();
@@ -56,6 +66,11 @@ switch ($act) {
             break;
         }
 
+    case 'contact': {
+            $roomController = new HomeController();
+            $roomController->contact();
+            break;
+        }
 
     case 'search': {
             $searchController = new SearchController($pdo);

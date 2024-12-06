@@ -83,7 +83,7 @@ class ReservationController
 
     public function showThisInvoiceDetail($id)
     {
-        // $invoice = $this->reservationQuery->getInvoiceDetail($id);
+        $invoice = $this->reservationQuery->getInvoiceDetail($id);
         // // var_dump($invoice);
         $reservation = new Reservation();
         $reservation = $this->reservationQuery->getInvoiceById($id);
