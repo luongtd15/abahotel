@@ -3,7 +3,7 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-                <div class="cr-banner-image-two">
+                <div class="cr-hero-banner cr-banner-image-two">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -14,11 +14,7 @@
                                         price tag.
                                         With special discounts and packages, you can maximize your stay and keep your
                                         wallet happy.</p>
-                                    <!-- <div class="cr-last-buttons">
-                                        <a href="shop-left-sidebar.html" class="cr-button">
-                                        Book now
-                                        </a>
-                                    </div> -->
+                                    
                                 </div>
                             </div>
                         </div>

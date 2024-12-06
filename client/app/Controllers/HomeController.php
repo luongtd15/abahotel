@@ -1,7 +1,9 @@
 <?php
-class HomeController{
-    public function showDashboard(){
-        $view= 'home-page';
+class HomeController
+{
+    public function showDashboard()
+    {
+        $view = 'home-page';
         $homeModel = new HomeModel();
 
         $roomType = $homeModel->getRoomTypeForHome();
@@ -10,26 +12,36 @@ class HomeController{
         include 'client/app/Views/layouts/master.php';
     }
 
-    public function about(){
+    public function about()
+    {
         $homeModel = new HomeModel();
 
         $roomType = $homeModel->getRoomTypeForHome();
-        $view= 'about';
+        $view = 'about';
         include 'client/app/Views/layouts/master.php';
     }
 
-    public function historyOrder(){
+    public function historyOrder()
+    {
         $homeModel = new HomeModel();
 
         $roomType = $homeModel->getRoomTypeForHome();
         if (empty($_SESSION['user-client']->id)) {
-            $view= 'home-page';
+            $view = 'home-page';
             include 'client/app/Views/layouts/master.php';
         }
 
         $orderHistory = $homeModel->getHistoryOrder();
-        $view= 'cart';
+        $view = 'cart';
         include 'client/app/Views/layouts/master.php';
     }
-    
+
+    public function contact()
+    {
+        $homeModel = new HomeModel();
+
+        $roomType = $homeModel->getRoomTypeForHome();
+        $view = 'contact';
+        include 'client/app/Views/layouts/master.php';
+    }
 }

@@ -17,11 +17,9 @@ class ReservationController
             return;
         }
 
-
         // Lấy id user từ session
         $id_user = $_SESSION['user-client']->id;
 
-        
         try {
             // Kiểm tra xem phòng có còn trống không
             if ($this->reservationModel->isRoomAvailable($_POST['room_id'])) {
@@ -38,13 +36,13 @@ class ReservationController
                 );
 
                 if ($result) {
+                    $_SESSION['booking_success'] = true; // Đặt phòng thành công
                     $_SESSION['success'] = "Đặt phòng thành công!";
                 } else {
                     $_SESSION['error'] = "Có lỗi xảy ra khi đặt phòng!";
                 }
 
-                // Chuyển hướng về trang chi tiết phòng
-                header('Location: ' . BASE_URL . '?act=room-detail&id=' . $_POST['room_id']);
+                header('Location: ' . BASE_URL . '?act=history_order');
             } else {
                 $_SESSION['error'] = "Room is Full"; // Thông báo nếu phòng đã đầy
                 header('Location: ' . BASE_URL . '?act=room-detail&id=' . $_POST['room_id']);
@@ -71,5 +69,21 @@ class ReservationController
             $_SESSION['error'] = $e->getMessage();
         }
         // Chuyển hướng về trang lịch sử đặt phòng
+    }
+
+    public function changeThisReservationStatus($id)
+    {
+        try {
+            // $invoice = $this->reservationModel->getInvoiceForCart($id);
+            $result = $this->reservationModel->changeReservationStatus($id);
+            if ($result) {
+                $_SESSION['success'] = "Thanh toán thành công!";
+                header('Location: ' . BASE_URL . '?act=history_order');
+            } else {
+                $_SESSION['error'] = "Có lỗi xảy ra khi thanh toán!";
+            }
+        } catch (Exception $e) {
+            $_SESSION['error'] = $e->getMessage();
+        }
     }
 }

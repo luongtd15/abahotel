@@ -121,7 +121,6 @@
                                                     <a href="javascript:void(0)">
                                                         <img src="<?php echo $item['room_image'] ?>" alt="room"
                                                             class="cr-cart-img">
-                                                        <?php echo $item['room_name'] ?>
                                                     </a>
                                                 </td>
                                                 <td><?php echo $item['reservation_status'] ?></td>
@@ -131,13 +130,29 @@
                                                 <td><?php echo $item['checkout_date'] ?></td>
                                                 <td><?php echo $item['created_at'] ?></td>
                                                 <td class="text-right">
-                                                    <a href="?act=cancel&id=<?= $item['reservation_id'] ?>" style="background-color: red; color: white; border: none; padding: 10px 20px; cursor: pointer;"
-                                                    onclick="return confirmDelete()">
-                                                        Cancel
-                                                    </a>
-                                                    <!-- Nút Hủy -->
+                                                    <div class="button-container">
+                                                        <!-- Nút Cancel -->
+                                                        <a href="?act=cancel&id=<?= $item['reservation_id'] ?>"
+                                                            class="btn-custom btn-cancel"
+                                                            onclick="return confirmDelete()"
+                                                            title="Cancel this reservation">
+                                                            <i class="ri-close-circle-line"></i> Cancel
+                                                        </a>
 
+                                                        <!-- Nút Pay (chỉ hiển thị khi Bank Transfer được chọn) -->
+                                                        <?php if (
+                                                            $item['payment_method'] === 'Bank Transfer'
+                                                            && $item['reservation_status'] == PENDING
+                                                        ): ?>
+                                                            <a href="?act=pay&id=<?= $item['reservation_id'] ?>"
+                                                                class="btn-custom btn-success"
+                                                                title="Pay now">
+                                                                <i class="ri-bank-line"></i> Pay
+                                                            </a>
+                                                        <?php endif; ?>
+                                                    </div>
                                                 </td>
+
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
@@ -152,24 +167,78 @@
 </section>
 
 <style>
+    /* Container căn chỉnh */
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        /* Khoảng cách giữa các nút */
+    }
+
+    /* Định dạng nút */
+    .btn-custom {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom i {
+        margin-right: 6px;
+        font-size: 16px;
+    }
+
+    /* Nút Cancel */
     .btn-cancel {
-        font-size: 12px;
-        /* Giảm kích thước font */
-        padding: 5px 10px;
-        /* Giảm padding */
-        border-radius: 5px;
-        /* Bo tròn nút */
-        float: right;
-        /* Đẩy nút về phía bên phải */
-        margin-top: 5px;
-        /* Tạo khoảng cách phía trên */
+        background-color: #f8d7da;
+        /* Màu nền đỏ nhạt */
+        color: #721c24;
+        /* Màu chữ đỏ đậm */
+        border: 1px solid #f5c6cb;
+        /* Viền đỏ nhạt */
     }
 
     .btn-cancel:hover {
-        background-color: #c82333;
-        /* Thay đổi màu khi hover */
-        color: #fff;
-        /* Đảm bảo chữ luôn rõ ràng */
+        background-color: #f5c6cb;
+        color: #721c24;
+        transform: scale(1.05);
+        /* Hiệu ứng phóng to */
+    }
+
+    /* Nút Pay */
+    .btn-success {
+        background-color: #d4edda;
+        /* Màu nền xanh nhạt */
+        color: #155724;
+        /* Màu chữ xanh đậm */
+        border: 1px solid #c3e6cb;
+        /* Viền xanh nhạt */
+    }
+
+    .btn-success:hover {
+        background-color: #c3e6cb;
+        color: #155724;
+        transform: scale(1.05);
+        /* Hiệu ứng phóng to */
+    }
+
+    /* Hiệu ứng hover cho toàn bộ nút */
+    .btn-custom:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        /* Đổ bóng nhẹ */
+    }
+
+    /* Hiển thị nút với icon đẹp */
+    .btn-custom i {
+        font-size: 18px;
+        /* Icon to hơn một chút */
     }
 </style>
 

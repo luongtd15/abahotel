@@ -109,7 +109,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider slider-nav thumb-image">
+                            <!-- <div class="slider slider-nav thumb-image">
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
                                         <img src="<?= BASE_URL . $roomThis['image'] ?>" alt="product-tab-1">
@@ -151,7 +151,7 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                             <p>( 75 Review )</p>
                         </div>
                         <div class="list">
-                        <ul>
+                            <ul>
                                 <li><label>Brand <span>:</span></label>Aba Hotel</li>
                                 <li><label>Location <span>:</span></label>City Center</li>
                                 <li><label>Room Type <span>:</span></label><?php foreach ($roomType as $room_type): ?>
@@ -184,7 +184,7 @@
                                             <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['number_of_beds'] : null ?>
                                         <?php endif; ?>
                                     <?php endforeach; ?></li>
-                                    <li><label>Occupancy <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                <li><label>Occupancy <span>:</span></label><?php foreach ($roomType as $room_type): ?>
                                         <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
                                             <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['max_occupancy'] : null ?>
                                         <?php endif; ?>
@@ -196,7 +196,7 @@
                                         <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
                                             <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['price'] : null ?>
                                         <?php endif; ?>
-                                    <?php endforeach; ?>$</li>
+                                        <?php endforeach; ?>$</li>
                             </ul>
                         </div>
                         <?php if ($roomThis['status'] === 'occupied'): ?>
@@ -217,15 +217,16 @@
                                     <button type="button" id="sub" class="minus">-</button>
                                 </div> -->
                                 <div class="cr-add-button">
-                                    <button type="button" class="cr-button cr-shopping-bag">Add to cart</button>
+                                    <a href="#quickview" class="cr-button" data-bs-toggle="modal" role="button">Book</a>
+                                    <!-- <button type="button" class="cr-button cr-shopping-bag"></button> -->
                                 </div>
                                 <div class="cr-card-icon">
                                     <!-- <a href="javascript:void(0)" class="wishlist">
                                         <i class="ri-heart-line"></i>
                                     </a> -->
-                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview" role="button">
+                                    <!-- <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview" role="button">
                                         <i class="ri-eye-line"></i>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         <?php endif; ?>
@@ -326,33 +327,33 @@
                                     creating a welcoming atmosphere that feels like a home away from home.</p>
                             </div>
                             <div class="list">
-                            <ul>
-                                <li><label>Brand <span>:</span></label>Aba Hotel</li>
-                                <li><label>Location <span>:</span></label>City Center</li>
-                                <li><label>Room Type <span>:</span></label><?php foreach ($roomType as $room_type): ?>
-                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
-                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['name'] : null ?>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?></li>
-                                <li><label>Beds <span>:</span></label><?php foreach ($roomType as $room_type): ?>
-                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
-                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['number_of_beds'] : null ?>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?></li>
+                                <ul>
+                                    <li><label>Brand <span>:</span></label>Aba Hotel</li>
+                                    <li><label>Location <span>:</span></label>City Center</li>
+                                    <li><label>Room Type <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                            <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                                <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['name'] : null ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?></li>
+                                    <li><label>Beds <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                            <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                                <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['number_of_beds'] : null ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?></li>
                                     <li><label>Occupancy <span>:</span></label><?php foreach ($roomType as $room_type): ?>
-                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
-                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['max_occupancy'] : null ?>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?></li>
-                                <li><label>Amenities <span>:</span></label>Free Wi-Fi, Spa, Gym</li>
-                                <li><label>Specialty <span>:</span></label>Top-notch Service, City Views</li>
-                                <li><label>Info <span>:</span></label>24/7 Room Service, Airport Shuttle</li>
-                                <li><label>Price <span>:</span></label><?php foreach ($roomType as $room_type): ?>
-                                        <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
-                                            <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['price'] : null ?>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>$</li>
-                            </ul>
+                                            <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                                <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['max_occupancy'] : null ?>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?></li>
+                                    <li><label>Amenities <span>:</span></label>Free Wi-Fi, Spa, Gym</li>
+                                    <li><label>Specialty <span>:</span></label>Top-notch Service, City Views</li>
+                                    <li><label>Info <span>:</span></label>24/7 Room Service, Airport Shuttle</li>
+                                    <li><label>Price <span>:</span></label><?php foreach ($roomType as $room_type): ?>
+                                            <?php if ($roomThis['id_room_type'] == $room_type['id']): ?>
+                                                <?= $roomThis['id_room_type'] == $room_type['id'] ? $room_type['price'] : null ?>
+                                            <?php endif; ?>
+                                            <?php endforeach; ?>$</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -613,12 +614,12 @@
                                         <?php if (isset($currentReservation) && is_array($currentReservation)): ?>
                                             <?php foreach ($currentReservation as $method): ?>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" 
-                                                           type="radio" 
-                                                           name="payment_method" 
-                                                           id="<?= $method['payment_method'] ?>" 
-                                                           value="<?= $method['payment_method'] ?>" 
-                                                           required>
+                                                    <input class="form-check-input"
+                                                        type="radio"
+                                                        name="payment_method"
+                                                        id="<?= $method['payment_method'] ?>"
+                                                        value="<?= $method['payment_method'] ?>"
+                                                        required>
                                                     <label class="form-check-label" for="<?= $method['payment_method'] ?>">
                                                         <i class="<?= $method['payment_method'] === 'Bank Transfer' ? 'ri-bank-line' : 'ri-money-dollar-box-line' ?>"></i>
                                                         <?= $method['payment_method'] ?>
@@ -687,14 +688,14 @@
             if (checkin && checkout) {
                 const days = calculateDays(checkin, checkout);
                 const total = basePrice * days;
-                
+
                 // Cập nhật hiển thị giá
                 priceDisplay.textContent = `$${total.toFixed(0)}`;
-                
+
                 // Cập nhật giá trị trong input hidden
                 totalPriceInput.value = total;
             } else {
-                // Nếu chưa chọn ngày, hiển thị giá gốc
+                // Nếu chưa chọn ngày, hi��n thị giá gốc
                 priceDisplay.textContent = `$${basePrice.toFixed(0)}`;
                 totalPriceInput.value = basePrice;
             }
