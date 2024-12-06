@@ -23,25 +23,6 @@ class Reservation
     }
     public function addReservation($id_user, $id_room, $reservation_status, $occupancy, $payment_method, $total_price, $checkin_date, $checkout_date)
     {
-        // try {
-        //     $sql = "INSERT INTO reservations (id_user, id_room, reservation_status, occupancy, payment_method, total_price, checkin_date, checkout_date)
-        //             VALUES (:id_user, :id_room, :reservation_status, :occupancy, :payment_method, :total_price, :checkin_date, :checkout_date)";
-        //     $stmt = $this->pdo->prepare($sql);
-        //     $result = $stmt->execute([
-        //         ':id_user' => $id_user,
-        //         ':id_room' => $id_room,
-        //         ':reservation_status' => $reservation_status,
-        //         ':occupancy' => $occupancy,
-        //         ':payment_method' => $payment_method,
-        //         ':total_price' => $total_price,
-        //         ':checkin_date' => $checkin_date,
-        //         ':checkout_date' => $checkout_date
-        //     ]);
-
-        //     return $result;
-        // } catch (\PDOException $e) {
-        //     throw new \Exception("Lỗi khi thêm đặt phòng: " . $e->getMessage());
-        // }
         try {
             // Bắt đầu giao dịch
             $this->pdo->beginTransaction();

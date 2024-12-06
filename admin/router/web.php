@@ -117,11 +117,11 @@ switch ($act) {
             break;
         }
 
-    case 'invoice-update': {
-            $reservationController = new ReservationController();
-            $reservationController->updateThisReservation($_GET['id']);
-            break;
-        }
+    // case 'invoice-update': {
+    //         $reservationController = new ReservationController();
+    //         $reservationController->updateThisReservation($_GET['id']);
+    //         break;
+    //     }
 
     case 'invoice-detail': {
             $reservationController = new ReservationController();

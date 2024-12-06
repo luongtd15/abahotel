@@ -201,5 +201,50 @@ class Room
         }
     }
 
+    public function changeRoomStatusToAvailable($id)
+    {
+        try {
+            // Câu SQL sử dụng tham số
+            $sql = "UPDATE rooms SET status = :status WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
 
+            // Bind giá trị
+            $stmt->bindValue(':status', STATUS_AVAILABLE);
+            $stmt->bindValue(':id', $id,);
+
+            // Thực thi truy vấn
+            if ($stmt->execute()) {
+                return true; // Thành công
+            }
+            return false; // Thất bại
+        } catch (Exception $err) {
+            // Ghi lỗi thay vì hiển thị
+            error_log("Error in changeRoomStatusToAvailable: " . $err->getMessage());
+            return false;
+        }
+    }
+
+
+    public function changeRoomStatusToOccupied($id)
+    {
+        try {
+            // Câu SQL với tham số
+            $sql = "UPDATE rooms SET status = :status WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+
+            // Bind giá trị
+            $stmt->bindValue(':status', STATUS_OCCUPIED);
+            $stmt->bindValue(':id', $id);
+
+            // Thực thi truy vấn
+            if ($stmt->execute()) {
+                return true; // Thành công
+            }
+            return false; // Thất bại
+        } catch (Exception $err) {
+            // Ghi lỗi vào log (hoặc xử lý phù hợp)
+            error_log("Error in changeRoomStatusToOccupied: " . $err->getMessage());
+            return false;
+        }
+    }
 }

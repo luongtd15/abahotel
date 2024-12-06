@@ -84,11 +84,10 @@ class RoomController
             $feedbacks = $this->roomQuery->getReservationForRoom($id);
             $reservations = $this->roomQuery->getFeedbackForRoom($id);
 
-            if (!empty($room->image) && file_exists(PATH_UPLOAD . $room->image)) {
-                unlink(PATH_UPLOAD . $room->image);
-            }
-
             if (empty($feedbacks) && empty($reservations)) {
+                if (!empty($room->image) && file_exists(PATH_UPLOAD . $room->image)) {
+                    unlink(PATH_UPLOAD . $room->image);
+                }
                 $this->roomQuery->delete($id);
                 $_SESSION['success'] = 'Room and associated image deleted successfully.';
             } else {
