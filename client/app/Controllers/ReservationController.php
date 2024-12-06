@@ -21,39 +21,7 @@ class ReservationController
         // Lấy id user từ session
         $id_user = $_SESSION['user-client']->id;
 
-        // try {
-        //     // Gọi hàm addReservation với id_user từ session
-        //     $result = $this->reservationModel->addReservation(
-        //         $id_user,                    // lấy từ session
-        //         $_POST['room_id'],           // id phòng được chọn
-        //         'Confirmed',                   // trạng thái mặc định
-        //         $_POST['occupancy'],         // số người
-        //         $_POST['payment_method'],
-        //         $_POST['total_price'],       // tổng tiền
-        //         $_POST['checkin_date'],      // ngày check-in
-        //         $_POST['checkout_date']      // ngày check-out
-        //     );
-        //     $reservationModel = new Reservation();
-        //     $currentReservation = $this->reservationModel->getPaymentMethod();
-
-
-        //     if ($result) {
-        //         $_SESSION['success'] = "Đặt phòng thành công!";
-
-
-
-        //     } else {
-        //         $_SESSION['error'] = "Có lỗi xảy ra khi đặt phòng!";
-        //     }
-
-
-        //     // Chuyển hướng về trang chi tiết phòng
-        //     header('Location: ' . BASE_URL . '?act=room-detail&id=' . $_POST['room_id']);
-
-        // } catch (Exception $e) {
-        //     $_SESSION['error'] = $e->getMessage();
-        //     header('Location: ' . BASE_URL . '?act=room-detail&id=' . $_POST['room_id']);
-        // }
+        
         try {
             // Kiểm tra xem phòng có còn trống không
             if ($this->reservationModel->isRoomAvailable($_POST['room_id'])) {

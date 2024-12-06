@@ -45,9 +45,11 @@
                                         <!-- <li>
                                             <a class="dropdown-item" href="?act=register">Register</a>
                                         </li> -->
-                                        <!-- <li>
-                                            <a class="dropdown-item" href="<?= BASE_URL_ADMIN ?>">Go to admin</a>
-                                        </li> -->
+                                        <?php if (($_SESSION['user-client']->role) == ROLE_ADMIN): ?>
+                                            <li>
+                                                <a class="dropdown-item" href="<?= BASE_URL_ADMIN ?>">Go to admin</a>
+                                            </li>
+                                        <?php endif; ?>
                                         <li>
                                             <a class="dropdown-item" href="?act=logout">Logout</a>
                                         </li>

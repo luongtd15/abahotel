@@ -60,9 +60,15 @@ class ReservationController
 
                 // Validate and upload image
 
+
                 // If there are no errors, create room in database
                 if (empty($errors)) {
                     $new = $this->reservationQuery->updateInvoice($id, $reservation);
+                    if ($reservation->reservation_status === CHECKOUT || $reservation->reservation_status === CANCEL) {
+                        $this->roomQuery->changeRoomStatusToAvailable($reservation->id_room);
+                    } else {
+                        $this->roomQuery->changeRoomStatusToOccupied($reservation->id_room);
+                    }
                     $_SESSION['success'] = 'Successfully updated this reservation.';
                     header('location:' . BASE_URL_ADMIN . '?act=invoice-update&id=' . $reservation->id);
                     exit();
@@ -77,8 +83,8 @@ class ReservationController
 
     public function showThisInvoiceDetail($id)
     {
-        $invoice = $this->reservationQuery->getInvoiceDetail($id);
-        // var_dump($invoice);
+        // $invoice = $this->reservationQuery->getInvoiceDetail($id);
+        // // var_dump($invoice);
         $reservation = new Reservation();
         $reservation = $this->reservationQuery->getInvoiceById($id);
 
@@ -90,6 +96,11 @@ class ReservationController
             // If there are no errors, create room in database
             if (empty($errors)) {
                 $new = $this->reservationQuery->updateInvoice($id, $reservation);
+                if ($reservation->reservation_status === CHECKOUT || $reservation->reservation_status === CANCEL) {
+                    $this->roomQuery->changeRoomStatusToAvailable($reservation->id_room);
+                } else {
+                    $this->roomQuery->changeRoomStatusToOccupied($reservation->id_room);
+                }
                 $_SESSION['success'] = 'Successfully updated this reservation.';
                 header('location:' . BASE_URL_ADMIN . '?act=invoice-detail&id=' . $reservation->id);
                 exit();
